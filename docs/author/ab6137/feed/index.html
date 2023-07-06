@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Andrew Battista &#8211; Data Dispatch</title>
+	<atom:link href="https://data-services.hosting.nyu.edu/author/ab6137/feed/" rel="self" type="application/rss+xml" />
+	<link>https://data-services.hosting.nyu.edu</link>
+	<description>NYU Data Services News and Updates</description>
+	<lastBuildDate>Tue, 12 Feb 2019 14:57:27 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.12</generator>
+
+<image>
+	<url>https://data-services.hosting.nyu.edu/wp-content/uploads/2017/07/DS-icon.png</url>
+	<title>Andrew Battista &#8211; Data Dispatch</title>
+	<link>https://data-services.hosting.nyu.edu</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Five things I learned at &#8230; Geo4Lib Camp 2019</title>
+		<link>https://data-services.hosting.nyu.edu/five-things-i-learned-at-geo4lib-camp-2019/</link>
+		
+		<dc:creator><![CDATA[Andrew Battista]]></dc:creator>
+		<pubDate>Tue, 12 Feb 2019 14:57:27 +0000</pubDate>
+				<category><![CDATA[Updates]]></category>
+		<guid isPermaLink="false">http://data-services.hosting.nyu.edu/?p=1289</guid>
+
+					<description><![CDATA[Last week marked the 4th consecutive Geo4Lib Camp, a GeoBlacklight-oriented (un)conference hosted by Stanford University Libraries. This is my favorite conference every year, and as always I am impressed by the strides that the open-source geospatial data discovery community has made. It seems like many libraries, including the University of California Berkeley and the University &#8230; <a href="https://data-services.hosting.nyu.edu/five-things-i-learned-at-geo4lib-camp-2019/" class="more-link">Continue reading<span class="screen-reader-text"> "Five things I learned at &#8230; Geo4Lib Camp 2019"</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Last week marked the 4th consecutive <a href="https://geo4libcamp2019.sched.com/">Geo4Lib Camp</a>, a GeoBlacklight-oriented (un)conference hosted by Stanford University Libraries. This is my favorite conference every year, and as always I am impressed by the strides that the open-source geospatial data discovery community has made. It seems like many libraries, including the University of California Berkeley and the University of Colorado, have established robust spatial data infrastructures. Berkeley in particular has launched <a href="https://geodata.lib.berkeley.edu/">GeoData @ UCB</a> with over 700 of their own vector layers, replete with web geoservices.</p>
+<figure id="attachment_1290" aria-describedby="caption-attachment-1290" style="width: 2048px" class="wp-caption alignnone"><img loading="lazy" class="size-full wp-image-1290" src="http://data-services.hosting.nyu.edu/wp-content/uploads/2019/02/geo4lib2019-pic.jpeg" alt="A picture of attendees of Geo4Lib Camp" width="2048" height="1536" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2019/02/geo4lib2019-pic.jpeg 2048w, https://data-services.hosting.nyu.edu/wp-content/uploads/2019/02/geo4lib2019-pic-300x225.jpeg 300w, https://data-services.hosting.nyu.edu/wp-content/uploads/2019/02/geo4lib2019-pic-768x576.jpeg 768w, https://data-services.hosting.nyu.edu/wp-content/uploads/2019/02/geo4lib2019-pic-1024x768.jpeg 1024w, https://data-services.hosting.nyu.edu/wp-content/uploads/2019/02/geo4lib2019-pic-1200x900.jpeg 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /><figcaption id="caption-attachment-1290" class="wp-caption-text">Group photo at Geo4Lib Camp 2019, Stanford University</figcaption></figure>
+<p>Here&#8217;s 5 things I learned at Geo4Lib Camp this year:</p>
+<ol>
+<li>The community has finally moved toward <strong>better integration with ESRI Online discovery systems</strong>. ESRI, which sponsored the conference this year and sent a couple of team members (Angela Lee and John Gravois) to participate, helped us to develop an &#8220;Open in ArcGIS Online&#8221; button. This feature allows users to import feature layers into an ArcGIS online session with one click and is now <a href="https://github.com/geoblacklight/geoblacklight/pull/781">a part of the master branch of GeoBlacklight</a>. This, coupled with talks of how ESRI users manage community data holdings, offers a lot of promise for building and managing data collections, and it also would appear to enable a much better connection between our local spatial data holdings and the larger ESRI suite, including StoryMaps.</li>
+<li>Relatedly, there was a great deal of talk about the possibility of <strong>moving toward a &#8220;distributed&#8221; spatial data infrastructure model</strong>. Many institutions have difficulty hosting or configuring web geoservices (NYU is not alone in this), and many organizations discussed the possibility of triangulating hosted data with externally provided web services (whether these be ESRI&#8217;s, instances of IIIF endpoints, or some other combination).</li>
+<li>No institution has developed a completely seamless workflow for producing GeoBlacklight metadata, but several <strong>places are beginning to develop and share tools for making transformations</strong>. In particular, I enjoyed delivering a workshop with Kim Durante on making GeoBlacklight metadata (<a href="https://tiny.cc/geo4lib2019">see here for workshop materials</a>). Kim developed a very effective, modular <a href="https://drive.google.com/open?id=1CK4FW-JPgmclBhMSVeA-AKFlSVH1Opg4">Jupyter Notebook</a> for leveraging GDAL and transforming GeoBlacklight metadata into XML format, while I shared our in-progress tool, <a href="https://github.com/NYULibraries/sdrfriend">SdrFriend</a>, which allows for extensive metadata transformation and management. Relatedly, developers at the University of Colorado Boulder have assembled <a href="https://github.com/culibraries/geo-data-loader">Geo-Loader</a>, a tool for authoring GeoBlacklight metadata and indexing it into Solr instantly. It&#8217;s really encouraging to see these tools and others like it emerging.</li>
+<li>I didn&#8217;t learn this at the conference itself, but it&#8217;s worth mentioning that the community finished an extensive winter 2019 sprint and released GeoBlacklight 2.0, which incorporates the work upstream from the Blacklight 7 release. Read Karen Majewicz&#8217;s <a href="https://geoblacklight.org/blog/2019/02/01/winter-code-sprint-version-2.html">overview of sprint accomplishments here</a>.</li>
+<li>Finally, I learned about <a href="https://www.cogeo.org/">cloud-optimized GeoTIFFs</a>, a more efficient way to store and host GeoTIFFs on an https server. This is technically another example of point 2 (above), but it&#8217;s something that I&#8217;d like to explore at NYU Libraries.</li>
+</ol>
+<p>We are all looking forward to Geo4Lib 2020!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Five Things I Learned at&#8230;. Geo4Lib Camp 2018</title>
+		<link>https://data-services.hosting.nyu.edu/five-things-i-learned-at-geo4lib-camp-2018/</link>
+		
+		<dc:creator><![CDATA[Andrew Battista]]></dc:creator>
+		<pubDate>Sun, 25 Feb 2018 18:33:12 +0000</pubDate>
+				<category><![CDATA[Updates]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[geo4libcamp]]></category>
+		<category><![CDATA[GeoBlacklight]]></category>
+		<category><![CDATA[GIS]]></category>
+		<category><![CDATA[index maps]]></category>
+		<category><![CDATA[metadata]]></category>
+		<category><![CDATA[open source development]]></category>
+		<guid isPermaLink="false">http://data-services.hosting.nyu.edu/?p=1211</guid>
+
+					<description><![CDATA[Earlier in February 2018, Stephen Balogh and I attended the third annual Geo4Lib Camp at Stanford University. Over the years, this conference has been a wonderful chance to participate in the growing community of open source development for GIS data discovery and metadata creation. 2018&#8217;s meeting included a nice mixture of people who have shaped &#8230; <a href="https://data-services.hosting.nyu.edu/five-things-i-learned-at-geo4lib-camp-2018/" class="more-link">Continue reading<span class="screen-reader-text"> "Five Things I Learned at&#8230;. Geo4Lib Camp 2018"</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Earlier in February 2018, Stephen Balogh and I attended the <a href="https://geo4libcamp2018.sched.com/">third annual Geo4Lib Camp at Stanford University</a>. Over the years, this conference has been a wonderful chance to participate in the growing community of open source development for GIS data discovery and metadata creation. 2018&#8217;s meeting included a nice mixture of people who have shaped GeoBlacklight from the beginning and new people, who are looking to develop spatial data discovery strategies at their respective institutions. Here&#8217;s five things that we learned at the conference and un-conference sessions that we&#8217;ll be taking back to NYU.</p>
+<p><img loading="lazy" class="size-full wp-image-1213 alignleft" src="https://data-services.hosting.nyu.edu/wp-content/uploads/2018/02/geoblacklight-logo.png" alt="" width="200" height="67" /></p>
+<ol>
+<li><strong>Open source development projects are egalitarian in many interesting and complex ways.</strong> Several sessions emerged on the idea of governance within the GeoBlacklight community. How do we reach consensus on design needs and priorities? Which voices tend to influence the direction of software development? How do people who don&#8217;t have a deep skill set in developing and coding contribute? Should there be a standard of conduct, at least, to which the community ascribes? These are questions that just about every open source project deals with. At Geo4Lib, we discussed these questions and more in several sessions. Jack Reed shared a few resources, including Jono Bacon&#8217;s <em><a href="http://www.artofcommunityonline.org/">The Art of Community</a>,</em> and the <a href="https://github.com/emberjs/rfcs">&#8220;Request for Change&#8221;</a> process that the ember.js project uses to push ideas and work forward. He also shared some critical philosophical concepts of the <a href="http://projectblacklight.org/">Blacklight project</a> that are helpful, such as the idea of <a href="https://en.wikipedia.org/wiki/Software_versioning">semantic versioning </a>and developing without pushing breaking changes. I was on an <a href="https://docs.google.com/presentation/d/e/2PACX-1vR0dSZH0BnIoYSLCmkYCte2mJIFlUPQ8ppkqGXnI9MDCAoRJTcjdXHowt-6kggVKu-NBqGerVMunVoC/pub?start=false&amp;loop=false&amp;delayms=3000">information panel</a> that also shared some basics of contributing to the community, but I plan on blogging about this in more depth on <a href="http://andrewbattista.github.io">my personal GitHub pages</a> later. Generally speaking, the GeoBlacklight project has a fairly well-established set of norms for apportioning work and developing, but these can continue to be crystallized moving forward so that even more people contribute work and ideas.</li>
+<li><strong>The community continues to develop support for index map discovery interfaces that are intuitive and visually compelling.</strong> Over the 2018 Winter Community Sprint, Jack Reed, Eric Larson, and others worked to further bolster <a href="https://github.com/OpenIndexMaps">OpenIndexMaps</a>, a GeoJSON-based specification that allows for fluid integration with <a href="http://iiif.io">IIIF</a> and offers seamless discovery of individual maps within a series. Stanford has <a href="https://earthworks.stanford.edu/catalog/stanford-ts545zc6250">already released a prototype</a>, and other institutions plan to follow suit in their own instances of GeoBlacklight. At NYU, we recently added several index maps for large sets (<a href="https://geo.nyu.edu/catalog/nyu_2451_38716">see example</a>) into our discovery interface, and we will make it a project this spring to convert these view to the new specification. It&#8217;s on the to-do list.</li>
+<li><strong>You can use GIS software and tools to generate operable GeoBlacklight metadata.</strong> And I&#8217;m not talking about ArcCatalog, or other traditional metadata editors. Tom Brittenacher at UC Santa Barbara presented some great strategies for <a href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/how-create-fishnet-works.htm">using the fishnet tool in ArcMap</a> to overlay vector gridlines that can be used for metadata creation. Kudos to Tom for modeling this method for making metadata authoring more efficient.</li>
+<li><strong>San Francisco is a city that has been mapped and contested vis-a-vis the construction of maps for hundreds of years</strong>. This was the main idea of David Rumsey&#8217;s plenary talk on the second day of the conference. David Rumsey had given an earlier version of this excellent synthesis at the <a href="http://sanfrancisco.carpediem.cd/events/5527712-the-making-of-mapping-at-sfmoma-san-francisco-museum-of-modern-art/">San Francisco Modern Museum of Art&#8217;s Public Knowledge series</a>. Rumsey showed numerous examples from his <a href="https://www.davidrumsey.com/">map collection</a> of ways in which ideas about space, access, and communal identity have been drawn onto maps of San Francisco over time.</li>
+<li><strong>Darren Hardy planned a great conference, and he will be missed by colleagues at Stanford University and beyond.</strong> Although we didn&#8217;t technically learn this at Geo4Lib Camp, Darren Hardy has recently announced that he is leaving Stanford to take another position in the private sector in Colorado. Darren is one of the original developers on the GeoBlacklight project, and his work in organizing the conference for the past three years and on software development within the community has been significant. We hope that Darren will remain in contact with our project!</li>
+</ol>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Five Things I learned at &#8230; ICPSR 2017 Biennial Meeting</title>
+		<link>https://data-services.hosting.nyu.edu/five-things-i-learned-at-icpsr-2017-biennial-meeting/</link>
+		
+		<dc:creator><![CDATA[Andrew Battista]]></dc:creator>
+		<pubDate>Thu, 19 Oct 2017 21:14:45 +0000</pubDate>
+				<category><![CDATA[Updates]]></category>
+		<category><![CDATA[Data]]></category>
+		<category><![CDATA[ICSPR]]></category>
+		<guid isPermaLink="false">http://data-services.hosting.nyu.edu/?p=1156</guid>
+
+					<description><![CDATA[Last week I visited Ann Arbor, Michigan for the 2017 Biennial Meeting for ICPSR&#8217;s Official Representatives (ORs). The meeting theme, &#8220;Building for a Data-Driven Future,&#8221; was a chance for ICPSR&#8217;s consortial members to learn more about the collections and get to know the ICSPR staff, educational programming, and data archiving efforts. Here&#8217;s five things I &#8230; <a href="https://data-services.hosting.nyu.edu/five-things-i-learned-at-icpsr-2017-biennial-meeting/" class="more-link">Continue reading<span class="screen-reader-text"> "Five Things I learned at &#8230; ICPSR 2017 Biennial Meeting"</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Last week I visited Ann Arbor, Michigan for the 2017 Biennial Meeting for <a href="http://www.icpsr.umich.edu/icpsrweb/">ICPSR&#8217;s</a> Official Representatives (ORs). The meeting theme, <a href="https://www.icpsr.umich.edu/icpsrweb/content/membership/or/ormeet/workshops.html">&#8220;Building for a Data-Driven Future,&#8221;</a> was a chance for ICPSR&#8217;s consortial members to learn more about the collections and get to know the ICSPR staff, educational programming, and data archiving efforts. Here&#8217;s five things I learned at the conference.</p>
+<p>1) ICPSR offers a <strong>robust range of resources</strong> and guidance for teaching with data. I had already known about the <a href="https://www.icpsr.umich.edu/icpsrweb/instructors/biblio/resources">Data-Driven Learning Guides</a> that ICPSR produces, but I got the chance to see that these really are effective, packaged datasets that can be used to teach concepts or statistical methods in a variety of contexts. I hope that anyone teaching with data at NYU makes use of these guides, even if for a point of departure.</p>
+<p>2) When teaching data literacy we should focus the <strong>discussion on the methods</strong> inherent in the data rather than cycling through lists of places where people can find data. This was the focus of Lynette Hoelter&#8217;s excellent workshop on the methods, vocabulary, and practices of information confidentiality within social sciences research (<a href="https://www.icpsr.umich.edu/files/membership/or/ormeet2017/UnderstandingMethodsMetadata.pptx">slides are available here</a>). The mode of collection matters, as does understanding the inherent biases and limitations of standard data studies. ICPSR metadata allows for users to locate studies according to methodology, coverage, universe, etc. I&#8217;m beginning to realize that students need to begin with these considerations before fully forming a research question that involves data.</p>
+<p>3) It&#8217;s difficult for libraries to provide services and support on campus for patrons who have the need to <strong>access secure data</strong>. Many of my colleagues are in the same boat I am; we do not have the space or physical infrastructure to facilitate access to data with confidentiality requirements. A big part of our responsibility is to partner with other institutions who may have this capacity and glean ideas; however, we should also work toward helping researchers find alternative datasets or surrogates (public use files) that still may allow them to ask meaningful questions (when possible). ICPSR itself is leading an effort in this area to develop protocol for a <a href="https://www.icpsr.umich.edu/icpsrweb/content/ICPSR/access/restricted/enclave.html">virtual data enclave</a> and <a href="https://www.icpsr.umich.edu/icpsrweb/content/about/researcher-credentialing.html">a process for researcher credentialing</a>, which would facilitate access to data for those who otherwise could not have the institutional support to work with it.</p>
+<p>4) It rains a lot in Ann Arbor.</p>
+<p>5) Legendary <a href="https://library.princeton.edu/staff/bordelon">data librarian Bobray Bordelon&#8217;s</a> <strong>staple karaoke song is allegedly Lady Gaga&#8217;s &#8220;Bad Romance.&#8221; </strong>We didn&#8217;t get to see a performance in person, but we did get to celebrate his acceptance of the William H. Flanigan award for distinguished service as an ICPSR Official Representative. I, with many other members of the ICPSR and data librarianship community, am in awe of Bobray&#8217;s knowledge and generosity to the field. We also learned that Princeton University LibGuides and webpages are the number 2 source of traffic to all of the data housed by <a href="https://usa.ipums.org/usa/">IPUMS,</a> which is surely a testament to Bobray&#8217;s work. Congratulations, Bobray, on this prestigious award.</p>
+<figure id="attachment_1157" aria-describedby="caption-attachment-1157" style="width: 225px" class="wp-caption alignleft"><img loading="lazy" class="size-medium wp-image-1157" src="http://data-services.hosting.nyu.edu/wp-content/uploads/2017/10/IMG_0012-e1508440017969-225x300.jpg" alt="" width="225" height="300" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/10/IMG_0012-e1508440017969-225x300.jpg 225w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/10/IMG_0012-e1508440017969-768x1024.jpg 768w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/10/IMG_0012-e1508440017969-1200x1600.jpg 1200w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/10/IMG_0012-e1508440017969.jpg 1512w" sizes="(max-width: 225px) 85vw, 225px" /><figcaption id="caption-attachment-1157" class="wp-caption-text">Bobray Bordelon, Data Services Librarian at Princeton University, accepts the William H. Flanigan Award.</figcaption></figure>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Five Things We Learned At . . . FOSS4G 2017</title>
+		<link>https://data-services.hosting.nyu.edu/five-things-we-learned-at-foss4g-2017/</link>
+		
+		<dc:creator><![CDATA[Andrew Battista]]></dc:creator>
+		<pubDate>Tue, 22 Aug 2017 13:43:56 +0000</pubDate>
+				<category><![CDATA[Updates]]></category>
+		<category><![CDATA[FOSS4G]]></category>
+		<category><![CDATA[geospatial software]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[Richard Stallman]]></category>
+		<guid isPermaLink="false">http://data-services.hosting.nyu.edu/?p=1105</guid>
+
+					<description><![CDATA[I&#8217;m happy to be back at NYU after a brief research break and a trip to Boston for FOSS4G. I was joined in Boston by my colleague, Stephen Balogh. Here&#8217;s five things that we learned at the conference. 1) There is a distinction between &#8220;free&#8221; software and &#8220;open source&#8221; software. By far, the most talked &#8230; <a href="https://data-services.hosting.nyu.edu/five-things-we-learned-at-foss4g-2017/" class="more-link">Continue reading<span class="screen-reader-text"> "Five Things We Learned At . . . FOSS4G 2017"</span></a>]]></description>
+										<content:encoded><![CDATA[<p><em>I&#8217;m happy to be back at NYU after a brief research break and a trip to Boston for <a href="http://2017.foss4g.org/">FOSS4G</a>. I was joined in Boston by my colleague, Stephen Balogh. Here&#8217;s five things that we learned at the conference.</em></p>
+<p><img loading="lazy" class="alignnone size-medium wp-image-1107" src="http://data-services.hosting.nyu.edu/wp-content/uploads/2017/08/rectangle_color_150_350-300x123.png" alt="" width="300" height="123" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/08/rectangle_color_150_350-300x123.png 300w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/08/rectangle_color_150_350.png 408w" sizes="(max-width: 300px) 85vw, 300px" /></p>
+<p><strong>1) There is a distinction between &#8220;free&#8221; software and &#8220;open source&#8221; software.</strong> By far, the most talked about part of the conference was Richard Stallman&#8217;s keynote, <a href="http://foss4g.guide/#9M4SVbV9EHnkBbgCPa">&#8220;Free Software: Freedom, Privacy, Sovreignty.&#8221;</a> Stallman, <a href="https://en.wikipedia.org/wiki/Richard_Stallman">founder of the Free Software Foundation</a> and the GNU project, spoke at length about the insidious ways that software is designed to control people, strip privacy and freedom, and force people to spend money when they otherwise would not. Free software does not rely on anything that is proprietary, nor does it place restrictions on people&#8217;s ability to modify it or share it, provided that they make such modifications accessible to everyone. Stallman drives a hard line between people who are committed to free software and those who stop at open source. I would argue that the distinction between the two means a lot less than the distinction between open source and proprietary or commercial software. This is particularly true in a community (GIS) that is dominated by a multi-billion dollar giant, ESRI, that is proprietary in all of the worst ways. But nevertheless, people were moved, and Stallman was able to auction off a stuffed gnu for $300 (which was donated to the Foundation).</p>
+<p><strong>2) Developing software in a community does not often remunerate individuals adequately, but it can generate social capital within that community.</strong> This was one of the points brought up by Paul Ramsey in his talk, <a href="http://foss4g.guide/#9M4SVbRbRSxw0c1Mt0">Why We Code.</a> In general, I am fascinated (and often in awe of) the efforts that people in the geospatial and library discovery community have made to develop software that benefits a very large collective. <a href="http://projectblacklight.org/">Blacklight</a> and <a href="http://geoblacklight.org/">GeoBlacklight</a> are two examples of this. I have worked in these communities to an extent but haven&#8217;t done active developing. Thus, I&#8217;m keen to the dynamic that Ramsey was talking about, and I wonder how others who do develop feel about it. Is the social capital real? Is it desirable in any way?</p>
+<p><strong>3) The geospatial world needs better, fluid tools to edit and create metadata.</strong> We discovered this (and arguably demonstrated it) in the pre-conference <a href="http://tiny.cc/foss4g2017">workshop we led</a> on creating GeoBlacklight metadata. There were a number of people at the conference from <a href="http://geonetwork-opensource.org/">GeoNetwork</a>, an open source metadata editor, but there were a lot of discussions about the ever-developing standards and practices in the GeoBlacklight and <a href="http://opengeoportal.org/">OpenGeoPortal</a> communities. We had a very fruitful meeting to talk about some possibilities, including the development of a common Solr core schema (see <a href="https://docs.google.com/document/d/1gOHiqjrG6Y2I9K5S6rpHElHCv3wjn-GaxNv18_uDBqg/edit?usp=sharing">notes from that meeting here</a>).</p>
+<p><strong>4) The &#8220;under the hood&#8221; process of Carto&#8217;s new spatial analysis features is a great project called Crankshaft.</strong> I got to see Carto&#8217;s <a href="https://twitter.com/MrEPhysics">Andy Eschbacher</a> give an overview of the tool, which embeds Python modules within PostgreSQL database search commands. I think it&#8217;s great that Carto makes this source code available.</p>
+<p><strong>5) Magic still happens at Fenway Park.</strong> We got a chance to slip away from the conference and take in a game at Fenway. And like the days of old, <a href="http://m.mlb.com/news/article/45075964/fenway-parks-anthem-started-innocuously/">a stirring rendition of &#8220;Sweet Caroline&#8221; brought the melancholy crowd back to life</a> and led to a great 9th inning comeback. The Sox won on a walk off.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Five Things We Learned at &#8230; LOEX 2017</title>
+		<link>https://data-services.hosting.nyu.edu/five-things-i-learned-at-loex-2017/</link>
+		
+		<dc:creator><![CDATA[Andrew Battista]]></dc:creator>
+		<pubDate>Mon, 22 May 2017 14:27:34 +0000</pubDate>
+				<category><![CDATA[Updates]]></category>
+		<category><![CDATA[fake news]]></category>
+		<category><![CDATA[information literacy]]></category>
+		<category><![CDATA[instruction]]></category>
+		<category><![CDATA[Lexington]]></category>
+		<category><![CDATA[LOEX]]></category>
+		<guid isPermaLink="false">http://data-services.hosting.nyu.edu/?p=1036</guid>
+
+					<description><![CDATA[Last week I returned from Lexington, KY, where I attended the 2017 LOEX Annual Conference. This is the third time I have presented at LOEX, and it&#8217;s always a great conference that focuses on instruction and pedagogy. My talk was on &#8220;Teaching Power and Authority in Library Discovery Systems&#8221; (slides available here). Here&#8217;s a list &#8230; <a href="https://data-services.hosting.nyu.edu/five-things-i-learned-at-loex-2017/" class="more-link">Continue reading<span class="screen-reader-text"> "Five Things We Learned at &#8230; LOEX 2017"</span></a>]]></description>
+										<content:encoded><![CDATA[<p>Last week I returned from Lexington, KY, where I attended the <a href="http://www.loexconference.org/">2017 LOEX Annual Conference</a>. This is the third time I have presented at LOEX, and it&#8217;s always a great conference that focuses on instruction and pedagogy. My talk was on &#8220;Teaching Power and Authority in Library Discovery Systems&#8221; (<a href="http://tiny.cc/loex2017">slides available here</a>). Here&#8217;s a list of things I gathered.</p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li>My own talk was about ways in which the academy reifies and circulates authority, so I&#8217;m sad that I missed <a href="https://t.co/Mp7XqE4sGu">Alex Watkins&#8217;s talk on inclusive authority</a>. Watkins suggests that many faculty &#8220;have restrictive source requirements that mirror and perpetuate the systematic exclusion of indigenous knowledge from academia.&#8221; The &#8220;Authority is Constructed and Contextual&#8221; Frame provides many opportunities to discuss this in practice with students. What do students (and faculty) stand to gain or lose by questioning this economy?</li>
+<li>As per my NYU colleagues, <a href="https://www.amazon.com/Kentuckys-Domain-Power-Greed-Corruption/dp/0595159915">Nicole Brown and Marybeth McCartin</a>, social learning exercises are important strategies for creating a community of practice that focuses of pedagogical development. Nicole and Marybeth modeled several activities, including <a href="http://shelfcheck.blogspot.com/2014/01/cards-against-librarianship-lets-play.html">Librarian Cards Against Humanity</a>. I would argue it&#8217;s a more effective assessment mechanism of organizational culture than <a href="https://www.climatequal.org/home">ClimateQUAL</a> (just kidding).</li>
+<li>The conference was held at the Lexington Convention Center, which affords this luxury:<br />
+<blockquote class="twitter-tweet" data-lang="en">
+<p dir="ltr" lang="en">We can shop for a new car while in line for lunch <a href="https://twitter.com/hashtag/loex2017?src=hash">#loex2017</a> <a href="https://t.co/96Ht6R9VIq">pic.twitter.com/96Ht6R9VIq</a></p>
+<p>— Beth Black (@b_l_black) <a href="https://twitter.com/b_l_black/status/863065357891842048">May 12, 2017</a></p></blockquote>
+<p><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Since I lived in Lexington for six years, I told people about some of the <a href="https://www.amazon.com/Kentuckys-Domain-Power-Greed-Corruption/dp/0595159915">scandalous backstory</a> of how the convention center came to be.</li>
+<li>Lane Wilkinson gave a great talk about ways to teach evaluation of sources in an era where we are saturated with rhetoric of fake news, confirmation bias, and &#8220;alternative facts.&#8221; One of the best takeaways from this talk is that <a href="http://www.truthrevolt.org/news/viral-chart-claims-fight-fake-news-promotes-biased-media">this viral graphic</a> is utter garbage. It makes me mad every time I see it.</li>
+<li>The #critlib conversation is expanding more than ever, and many librarians are drawing from <a href="https://t.co/4i3mRXQu8W">Michelle Alexander and Angela Y. Davis</a> to form their approach to teaching.</li>
+</ol>
+</li>
+</ol>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Challenge of Rescuing Federal Data: Thoughts and Lessons</title>
+		<link>https://data-services.hosting.nyu.edu/the-challenge-of-rescuing-federal-data-thoughts-and-lessons/</link>
+		
+		<dc:creator><![CDATA[Andrew Battista]]></dc:creator>
+		<pubDate>Thu, 04 May 2017 15:03:36 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[data refuge]]></category>
+		<category><![CDATA[data rescue]]></category>
+		<category><![CDATA[discovery]]></category>
+		<category><![CDATA[HUD]]></category>
+		<category><![CDATA[preservation]]></category>
+		<category><![CDATA[SHA256]]></category>
+		<guid isPermaLink="false">http://data-services.hosting.nyu.edu/?p=995</guid>
+
+					<description><![CDATA[Efforts to rescue data underscores what many people in the library community have known all along: even if federal data won't abscond into thin air, much of it is poorly organized, partially documented, and effectively undiscoverable.]]></description>
+										<content:encoded><![CDATA[<p><strong>By Andrew Battista and Stephen Balogh</strong></p>
+<p><span style="font-weight: 400;">Recently, we experienced another panic over the ideological attack on scientific data. Rumors circulated that the EPA website, including all of the data it hosts, would be taken down. This</span><span style="font-weight: 400;"> </span><span style="font-weight: 400;"><a href="https://medium.com/@BernHyland/us-epa-orders-turn-off-of-open-data-service-on-28-apr-2017-586cd65fdb14">appears to be just a rumor</a>,</span><span style="font-weight: 400;"> for now. The current presidential administration notwithstanding, efforts to rescue data underscores what many people in the library community have known all along: even if federal data won&#8217;t abscond into thin air, much of it is poorly organized, partially documented, and effectively undiscoverable. Libraries can improve access to government data and should develop workflows for preserving federal data to make it more accessible.</span></p>
+<p><span style="font-weight: 400;">Data rescue <a href="https://www.wired.com/2017/01/rogue-scientists-race-save-climate-data-trump/">efforts began in January 2017</a>, and over the past few months many institutions hosted hack-a-thon style events to scrape data and develop strategies for preservation. The Environmental Data &amp; Governance Initiative (EDGI) developed a <a href="https://envirodatagov.org/event-toolkit/">data rescue toolkit</a>, which apportioned the challenge of saving data by distinct federal agency. </span><span style="font-weight: 400;">The efforts of <a href="https://www.datarefuge.org">Data Refuge</a>, a group based at Penn seeking to establish best practices for data rescue and preservation, have been written about in a number of places, <a href="https://data-services.hosting.nyu.edu/saving-data-preservation-during-political-turmoil/">including this blog</a>. </span></p>
+<p><span style="font-weight: 400;">W</span>e&#8217;ve had a number of conversations at NYU and with other members of the library community about the implications of preserving federal data and providing access to it. The efforts, while important, call attention to a problem of organization that is very large in scope and likely cannot be solved in full by libraries.</p>
+<figure id="attachment_996" aria-describedby="caption-attachment-996" style="width: 632px" class="wp-caption alignnone"><a href="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/starfish_story.png"><img loading="lazy" class="wp-image-996 size-full" src="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/starfish_story.png" alt="" width="632" height="350" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/starfish_story.png 632w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/starfish_story-300x166.png 300w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px" /></a><figcaption id="caption-attachment-996" class="wp-caption-text">Also a metaphor for preserving federal data</figcaption></figure>
+<p>Thus far, the divide-and-conquer model has postulated that individual institutions can &#8220;claim&#8221; a specific federal agency, do a deep dive to root around its websites, download data, and then mark the agency off a list as &#8220;preserved.&#8221; The process raises many questions, for libraries and for the data refuge movement. What does it mean to &#8220;claim&#8221; a federal agency? How can one institution reasonably develop a &#8220;chain of custody&#8221; for an agency&#8217;s comprehensive collection of data (and how do we define chain of custody)?</p>
+<p>How do we avoid duplicated labor? Overlap is inevitable and isn&#8217;t necessarily a bad thing, but given the scope of the challenge, it would be ideal to distribute efforts so as to benefit from the hard work of metadata remediation that all of us will inevitably do.</p>
+<p>These questions suggest even more questions about communication. How do we know when a given institution has preserved federal data, and at what point do we feel ready as a community to acknowledge that preservation has sufficiently taken place? Further, do we expect institutions to communicate that a piece of data has been published, and if so, by what means? What does preservation mean, especially in an environment where data is changing frequently, and what is the standard for discovery? Is it sufficient for one person or institution to download a file and save it? And when an institution claims that it has “rescued” data from a government agency, what commitment does it have to keep up with data refreshes on a regular basis?</p>
+<p>An example of an attempt to engage with these issues is Stanford University’s recent decision to preserve the <a href="https://earthworks.stanford.edu/?page=1&amp;per_page=100&amp;q=United+States.+Department+of+Housing+and+Urban+Development">Housing and Urban Development spatial datasets</a>, since they were directly attacked by Republican lawmakers. Early in the Spring 2017 semester, Stanford downloaded all of HUD&#8217;s spatial data, created metadata records for them, and loaded them into their spatial discovery environment (<a href="https://earthworks.stanford.edu">EarthWorks</a>).</p>
+<figure id="attachment_1008" aria-describedby="caption-attachment-1008" style="width: 840px" class="wp-caption alignnone"><img loading="lazy" class="wp-image-1008 size-large" src="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-1024x1015.png" alt="" width="840" height="833" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-1024x1015.png 1024w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-150x150.png 150w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-300x297.png 300w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-768x761.png 768w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks.png 1170w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /><figcaption id="caption-attachment-1008" class="wp-caption-text">A HUD dataset preserved in Stanford&#8217;s Spatial Data Repository and digital collections</figcaption></figure>
+<p>We can see from the <a href="https://earthworks.stanford.edu/catalog/stanford-jp095bg5089.json">timestamp on their metadata record</a> that the files were added on March 24, 2017. Stanford&#8217;s collection process is very robust and implies a level of curation and preservation that is impressive. As colleagues, we know that by adding a file, Stanford has committed to preserving it in its institutional repository, presenting original FGDC or ISO 19139 metadata records, and publishing their newly created records to <a href="https://github.com/OpenGeoMetadata">OpenGeoMetadata</a>, a consortium of shared geospatial metadata records. Furthermore, we know that all records are discoverable at the layer level, which suggests a granularity in description and access that often is not present at many other sources, including Data.gov.</p>
+<p>However, if I had not had conversations with colleagues who work at Stanford, I wouldn&#8217;t have realized they preserved the files at all and likely would&#8217;ve tried to make records for <a href="https://geo.nyu.edu">NYU&#8217;s Spatial Data Repository</a>. Even as they exist, it&#8217;s difficult for me to know that these files were in fact saved as part of the Data Refuge effort. Furthermore, Stanford has made no public claim or longterm &#8220;chain of custody&#8221; agreement for HUD data, simply because no standards for doing so currently exist.</p>
+<p>Maybe it wouldn&#8217;t be the worst thing for NYU to add these files to our repository, but it seems unnecessary, given the magnitude of federal data to be preserved. However, some redundancy is a part of the <a href="https://www.datarefuge.org/about">goals that Data Refuge imagines</a>:</p>
+<blockquote><p>Data collected as part of the #DataRefuge initiative will be stored in multiple, trusted locations to help ensure continued accessibility. [&#8230;]DataRefuge acknowledges&#8211;and in fact draws attention to&#8211;the fact that there are no guarantees of perfectly safe information. But there are ways that we can create safe and trustworthy copies. DataRefuge is thus also a project to develop the best methods, practices, and protocols to do so.</p></blockquote>
+<p>Each institution has specific curatorial needs and responsibilities, which imply choices about providing access to materials in library collections. These practices seldom coalesce with data management and publishing practices from those who work with federal agencies. There has to be some flexibility between community efforts to preserve data, individual institutions and their respective curation practices.</p>
+<p><b>&#8220;That&#8217;s Where the Librarians Come In&#8221;</b></p>
+<p><span style="font-weight: 400;">NYU imagines a model that dovetails with the Data Refuge effort in which individual institutions build upon their own strengths and existing infrastructure. We took as a directive some advice that Kimberly Eke at Penn circulated, <a href="https://hackmd.io/BwQwJgxhYEYJwFoBsBGSCAswkgSOA7AQjPhMAKwrADMcYNQA">including this sample protocol</a>. </span><span style="font-weight: 400;">We quickly began to realize that no approach is perfect, but we wanted to develop a pilot process for collecting data and bringing it into our permanent geospatial data holdings. The remainder of this post is a narrative of that experience in order to demonstrate some of the choices we made, assumptions we started with, and strategies we deployed to preserve federal data. Our goal is to preserve a small subset of data in a way that benefits our users and also meets the standards of the Data Refuge movement.</span></p>
+<p><img loading="lazy" class="wp-image-1000 size-medium alignleft" src="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/FS_green-273x300.png" alt="" width="273" height="300" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/FS_green-273x300.png 273w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/FS_green-768x843.png 768w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/FS_green.png 850w" sizes="(max-width: 273px) 85vw, 273px" /></p>
+<p>We began by collecting the entirety of publicly accessible metadata from <a href="http://data.gov">Data.gov</a>, using the underlying the <a href="http://docs.ckan.org/en/latest/api/">CKAN data catalog API</a>. This provided us with approximately 150,000 metadata records, stored as individual JSON files. Anyone who has worked with Data.gov metadata knows that it’s messy and inconsistent but is also a good starting place to develop better records. Furthermore, the concept of Data.gov serves as an effective registry or checklist <a href="https://github.com/datproject/svalbard">(this global metadata vault could be another starting place)</a>; it&#8217;s not the only source of government data, nor is it necessarily authoritative. However, it is a good point of departure, a relatively centralized list of items that exist in a form that we can work with.</p>
+<p>Since NYU Libraries already has a robust spatial data infrastructure and has established workflows for accessioning GIS data, we began by reducing the set of Data.gov records to those which are likely to represent spatial data. We did this by searching only for files that meet the following conditions:</p>
+<ul>
+<li>Record contains at least one download resource with a &#8216;format&#8217; field that contains any of {&#8216;shapefile&#8217;, &#8216;geojson&#8217;, &#8216;kml&#8217;, &#8216;kmz&#8217;}</li>
+<li>Record contains at least one resource with a &#8216;url&#8217; field that contains any of {&#8216;shapefile&#8217;, &#8216;geojson&#8217;, &#8216;kml&#8217;, [&#8216;original&#8217; followed by &#8216;.zip&#8217;]}</li>
+</ul>
+<p>That search generated 6,353 records that are extremely likely to contain geospatial data. From that search we <a href="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=856218329&amp;single=true">yielded a subset of records</a> and then transformed them into a .CSV:</p>
+<style type="text/css">
+       .errordiv { padding:10px; margin:10px; border: 1px solid #555555;color: #000000;background-color: #f8f8f8; width:500px; }#advanced_iframe {visibility:visible;opacity:1;vertical-align:top;}.ai-info-bottom-iframe { position: fixed; z-index: 10000; bottom:0; left: 0; margin: 0px; text-align: center; width: 100%; background-color: #ff9999; padding-left: 5px;padding-bottom: 5px; border-top: 1px solid #aaa }#ai-layer-div-advanced_iframe p {height:100%;margin:0;padding:0}</style><script type="text/javascript">  var ai_iframe_width_advanced_iframe = 0;  var ai_iframe_height_advanced_iframe = 0;var aiIsIe8=false;var aiOnloadScrollTop="true";
+if (typeof aiReadyCallbacks === 'undefined') {
+    var aiReadyCallbacks = [];  
+} else if (!(aiReadyCallbacks instanceof Array)) {
+    var aiReadyCallbacks = [];
+}    function aiShowIframeId(id_iframe) { jQuery("#"+id_iframe).css("visibility", "visible");    }    function aiResizeIframeHeight(height) { aiResizeIframeHeight(height,advanced_iframe); }    function aiResizeIframeHeightId(height,width,id) {aiResizeIframeHeightById(id,height);}</script><iframe id="advanced_iframe"  name="advanced_iframe"  src="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=856218329&#038;amp;single=true&#038;amp;widget=true&#038;amp;headers=false"  width="100%"  height="600"  frameborder="0"  allowtransparency="true"  style=";width:100%;height:600px;" ></iframe><script type="text/javascript">var ifrm_advanced_iframe = document.getElementById("advanced_iframe");var hiddenTabsDoneadvanced_iframe = false;
+function resizeCallbackadvanced_iframe() {}function aiChangeUrl(loc) {}</script><script type="text/javascript"></script>
+<p>The next step was to filter down and look for meaningful patterns. We first filtered out all records that were not from federal sources, divided categories into like agencies, and started exploring them. Ultimately, we decided to rescue data from the Department of Agriculture, Forest Service. This agency seems to be a good test case for a number of the challenges that we’ve identified. We isolated 136 records and organized them <a href="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=1569491355&amp;single=true">here (click to view spreadsheet)</a>. However, we quickly realized that a sizable chunk of the records had already somehow become inactive or defunct after we had downloaded them (shaded in pink), perhaps because they had been superseded by another record. For example, <a href="http://catalog.data.gov/dataset/23c7852d-9e9e-47e5-b215-47028c1f094a">this record</a> is probably meant to represent the same <a href="http://catalog.data.gov/dataset/09d11982-4bb5-474e-a690-6874da1f6042">data as this record</a>. We can&#8217;t know for sure, which means we immediately had to decide what to do with potential gaps. We forged ahead with the records that were &#8220;live&#8221; in Data.gov.</p>
+<p><b>About Metadata Cleaning</b></p>
+<p>There are some limitations to the metadata in Data.gov that required our team to make a series of subjective decisions:</p>
+<ol>
+<li>Not everything in Data.gov points to an actual dataset. Often, records can point to other portals or clearinghouses of data that are not represented within Data.gov. We ultimately decided to omit these records from our data rescue effort, even if they point to a webpage, API, or geoservice that does contain some kind of data.</li>
+<li><span style="font-weight: 400;">The approach to establishing order on Data.gov is inconsistent. Most crucially for us, there is not a one-to-one correlation between a record and an individual layer of geospatial data. This happens frequently on federal sites. For instance, </span><a href="https://catalog.data.gov/dataset/77781e81-17d6-4f91-a2df-7dfc7cb33eef"><span style="font-weight: 400;">the record for the U.S. Forest Service Aerial Fire Retardant Hydrographic Avoidance Areas: Aquatic</span></a><span style="font-weight: 400;"> actually contains eight distinct shapefile layers that correspond to the different regions of coverage. NYU’s collection practice dictates that each of these layers be represented by a distinct record, but in the Data.gov catalog, they are condensed into a single record. </span></li>
+<li>Not all data providers publish records for data on Data.gov consistently. Many agencies point to some element of their data that exists, but when you leave the Data.gov catalog environment and go to the source URL listed in the resources section of the record, you’ll find even more data. We had to make decisions about whether or not (and how) we would include this kind of data.</li>
+<li>It’s very common that single Data.gov metadata records remain intact, but the data that they represent changes. The Forest Service is a good example of this, as files are frequently refreshed and maintained within the USDA Forestry <a href="https://data.fs.usda.gov/geodata/">geodata clearinghouse</a>. We did not make any effort in either of these cases to track down other sets of data that the Data.gov metadata records gesture toward (at least not at this time).</li>
+</ol>
+<p>Relatedly, we did not make attempts to provide original records for different formats of what appeared to be the same data. In the case of the Forest Service, many of the records contained both a shapefile and a geodatabase, as well as other original metadata files. Our general approach was to save the shapefile and publish it in our collection environment, then bundle up all other &#8220;data objects&#8221; associated with a discrete Data.gov record and include them in the preservation environment of our Spatial Data Repository.</p>
+<p>Finally, we realized that the quality of the metadata itself varies widely. We found that it’s a good starting place to creating metadata for discovery, even if we agree that a Data.gov record is an arbitrary way to describe a single piece of data. However, we had to clean the Data.gov records to adhere to the GeoBlacklight standard and our own internal cataloging practices. Here’s a snapshot of the metadata in process.</p>
+<pre><strong>Sample Record</strong>
+{
+dc_identifier_s: "http://hdl.handle.net/2451/12345",
+dc_title_s: "<span style="color: #ff0000;">2017 Aerial Fire Retardant Hydrographic Avoidance Areas: Aquatic - Region 1</span>",
+dc_description_s: "<span style="color: #ff0000;">This polygon layer depicts</span> aerial retardant avoidance areas for hydrographic feature data. Aerial retardant avoidance area for hydrographic feature data are based on high resolution National Hydrographic Dataset (NHD) produced by USGS and available from the USFS Enterprise Data Warehouse. Forests and/or regions have had the opportunity to modify the default NHD water representation (300ft buffer from all water features) for their areas of interest to accurately represent aerial fire retardant avoidance areas as described in the 2011 Record of Decision for the Nationwide Aerial Application of Fire Retardant on National Forest System Land EIS. These changes have been integrated into this dataset depicting aerial fire retardant avoidance areas for hydrographic features.The following process was used to develop the hydrographic areas to be avoided by aerial fire retardant. Using the FCODE attribute, streams/rivers/waterbodies are categorized into perennial and intermittent/ephemeral types. Linear features (streams &amp; rivers) FCODES 46003 and 46006 and polygonal features (lakes and other waterbody) FCODES 39001, 39005, 39006, 43612, 43614, 46601 are considered intermittentt/ephemeral features. All other FCODES are considered to be perennial features. Underground and covered water features (e.g., pipelines) are excluded. Initially, all intermittent/ephemeral and perennial features were buffered by 300 feet by the Forest/Region units. Subsequently, Forest/Region units may have extended these buffers locally based on their requirements. The resulting avoidance areas may have overlapping features due to the buffering processes.The National Hydrography Dataset (NHD) is a feature-based database that interconnects and uniquely identifies the stream segments or reaches that make up the nation's surface water drainage system. NHD data was originally developed at 1:100,000-scale and exists at that scale for the whole country. This high-resolution NHD, generally developed at 1:24,000/1:12,000 scale, adds detail to the original 1:100,000-scale NHD. (Data for Alaska, Puerto Rico and the Virgin Islands was developed at high-resolution, not 1:100,000 scale.) Local resolution NHD is being developed where partners and data exist. The NHD contains reach codes for networked features, flow direction, names, and centerline representations for areal water bodies. Reaches are also defined on waterbodies and the approximate shorelines of the Great Lakes, the Atlantic and Pacific Oceans and the Gulf of Mexico. The NHD also incorporates the National Spatial Data Infrastructure framework criteria established by the Federal Geographic Data Committee.<span style="color: #ff0000;">This layer was preserved from the Data.gov catalog as part of the Data Refuge effort (www.datarefuge.org) and is a representation of catalog item 77781e81-17d6-4f91-a2df-7dfc7cb33eef.</span> <span style="color: #ff0000;">Some modifications to the metadata have been made. Refer to the checksum manifest for a list of all original data objects associated with this item. Refer to the documentation for original metadata and information on the data.</span>",
+dc_rights_s: "Public",
+dct_provenance_s: "NYU",
+dct_references_s: "{"http://schema.org/url":"http://hdl.handle.net/2451/12345","http://schema.org/downloadUrl":"https://archive.nyu.edu/bitstream/2451/12345/2/nyu_2451_12345.zip","http://www.opengis.net/def/serviceType/ogc/wfs":"https://maps-public.geo.nyu.edu/geoserver/sdr/wfs","http://www.opengis.net/def/serviceType/ogc/wms":"https://maps-public.geo.nyu.edu/geoserver/sdr/wms"}",
+layer_id_s: "sdr:nyu_2451_12345",
+layer_slug_s: "nyu_2451_12345",
+layer_geom_type_s: "Polygon",
+layer_modified_dt: "2017-5-2T19:45:8Z",
+dc_format_s: "Shapefile",
+dc_language_s: "English",
+dc_type_s: "Dataset",
+dc_publisher_s: [
+"<span style="color: #ff0000;">United States. Department of Agriculture</span>"
+],
+dc_creator_sm: [ ],
+dc_subject_sm: [
+"<span style="color: #ff0000;">Forest management",
+"Hydrography",
+"Fire prevention",
+"Emergency management</span>"
+],
+dct_isPartOf_sm: "Data.gov Rescue",
+dct_issued_s: "04-01-2017",
+dct_temporal_sm: [
+"2017"
+],
+dct_spatial_sm: [
+"United States of America"
+],
+dc_relation_sm: [
+"http://sws.geonames.org/6252001/about/rdf"
+],
+solr_geom: "ENVELOPE(-170.1769013405, -64.5665435791, 71.6032483233, 24.7073204053)",
+solr_year_i: 2017,
+geoblacklight_version: "1.0"
+}</pre>
+<p>Some of the revisions to the metadata are small and reflect choices that we make at NYU (these are highlighted in red). For instance, the titles were changed to reflect a date-title-area convention that we already use. Other fields (like Publisher) are authority controlled and were easy to change, while others, like format and provenance, were easy to add. For those unfamiliar with the GeoBlacklight standard, <a href="https://github.com/geoblacklight/geoblacklight-schema">refer to the project schema pages and related documentation</a>. Many of the metadata enhancements are system requirements for items to be discovered within our <a href="https://geo.nyu.edu">Spatial Data Repository</a>. Subjects presented more of a problem, as these are drawn from an informal tagging system on Data.gov. We used an elaborate process of finding and replacing to remediate these subjects into the LCSH Authority, which connects the items we collect into our larger library discovery environment.</p>
+<p>The most significant changes are in the descriptions. We preserved the essence of the original Data.gov description, yet we cleaned up the prose a little bit and added a way to trace the item that we are preserving back to its original representation in Data.gov. In the case of aforementioned instances, in which a single Data.gov record contains more than one shapefile, we generated an entirely new record and referenced it to the original Data.gov UUID. For example:</p>
+<pre><strong>Sample Record</strong>
+{
+dc_identifier_s: "http://hdl.handle.net/2451/12346",
+dc_title_s: <span style="color: #000000;">"2017 Aerial Fire Retardant Hydrographic Avoidance Areas: Aquatic - Region 2",
+dc_description_s: "This polygon layer depicts aerial retardant avoidance areas for hydrographic feature dat</span>a. Aerial retardant avoidance area for hydrographic feature data are based on high resolution National Hydrographic Dataset (NHD) produced by USGS and available from the USFS Enterprise Data Warehouse. Forests and/or regions have had the opportunity to modify the default NHD water representation (300ft buffer from all water features) for their areas of interest to accurately represent aerial fire retardant avoidance areas as described in the 2011 Record of Decision for the Nationwide Aerial Application of Fire Retardant on National Forest System Land EIS. These changes have been integrated into this dataset depicting aerial fire retardant avoidance areas for hydrographic features.The following process was used to develop the hydrographic areas to be avoided by aerial fire retardant. Using the FCODE attribute, streams/rivers/waterbodies are categorized into perennial and intermittent/ephemeral types. Linear features (streams &amp; rivers) FCODES 46003 and 46006 and polygonal features (lakes and other waterbody) FCODES 39001, 39005, 39006, 43612, 43614, 46601 are considered intermittentt/ephemeral features. All other FCODES are considered to be perennial features. Underground and covered water features (e.g., pipelines) are excluded. Initially, all intermittent/ephemeral and perennial features were buffered by 300 feet by the Forest/Region units. Subsequently, Forest/Region units may have extended these buffers locally based on their requirements. The resulting avoidance areas may have overlapping features due to the buffering processes.The National Hydrography Dataset (NHD) is a feature-based database that interconnects and uniquely identifies the stream segments or reaches that make up the nation's surface water drainage system. NHD data was originally developed at 1:100,000-scale and exists at that scale for the whole country. This high-resolution NHD, generally developed at 1:24,000/1:12,000 scale, adds detail to the original 1:100,000-scale NHD. (Data for Alaska, Puerto Rico and the Virgin Islands was developed at high-resolution, not 1:100,000 scale.) Local resolution NHD is being developed where partners and data exist. The NHD contains reach codes for networked features, flow direction, names, and centerline representations for areal water bodies. Reaches are also defined on waterbodies and the approximate shorelines of the Great Lakes, the Atlantic and Pacific Oceans and the Gulf of Mexico. The NHD also incorporates the National Spatial Data Infrastructure framework criteria established by the Federal Geographic Data Committee.<span style="color: #ff0000;">This layer does not have a discrete representation in Data.gov; rather, it is a data object represented on the record 77781e81-17d6-4f91-a2df-7dfc7cb33eef. Some modifications to the metadata have been made. Refer to the checksum manifest for a list of all original data objects associated with this item. Refer to the documentation for original metadata and information on the data</span>.",
+dc_rights_s: "Public",
+dct_provenance_s: "NYU",
+dct_references_s: "{"http://schema.org/url":"http://hdl.handle.net/2451/12345","http://schema.org/downloadUrl":"https://archive.nyu.edu/bitstream/2451/12345/2/nyu_2451_12345.zip","http://www.opengis.net/def/serviceType/ogc/wfs":"https://maps-public.geo.nyu.edu/geoserver/sdr/wfs","http://www.opengis.net/def/serviceType/ogc/wms":"https://maps-public.geo.nyu.edu/geoserver/sdr/wms"}",
+layer_id_s: "sdr:nyu_2451_12345",
+layer_slug_s: "nyu_2451_12345",
+layer_geom_type_s: "Polygon",
+layer_modified_dt: "2017-5-2T19:45:8Z",
+dc_format_s: "Shapefile",
+dc_language_s: "English",
+dc_type_s: "Dataset",
+<span style="color: #000000;">dc_publisher_s: [
+"United States. Department of Agriculture"
+],
+dc_creator_sm: [ ],
+dc_subject_sm: [
+"Forest management",
+"Hydrography",
+"Fire prevention",
+"Emergency management"
+],
+dct_isPartOf_sm: "Data.gov Rescue",
+dct_issued_s: "04-01-2017",
+dct_temporal_sm: [
+"2017"
+],
+dct_spatial_sm: [
+"United States of America"
+],
+dc_relation_sm: [
+"http://sws.geonames.org/6252001/about/rdf"
+],
+solr_geom: "ENVELOPE(-170.1769013405, -64.5</span>665435791, 71.6032483233, 24.7073204053)",
+solr_year_i: 2017,
+geoblacklight_version: "1.0"
+}</pre>
+<p>Adding these descriptions into the metadata field not only identifies our work with the data refuge movement, but also it allows for anyone who discovers this data to track back to its presentation in an original context. Still it&#8217;s important to emphasize that this process inevitably means that not all data associated with the Forest Service has been rescued by NYU.</p>
+<p>In all, by narrowing down to one agency and then doing a search that is likely to yield spatial data only, we ended up identifying 71 records of interest but ultimately publishing 90 individual records to represent this data (<a href="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=1639213871&amp;single=true">see our final spreadsheet</a>). Note that we are still in the process of importing these records into our discovery environment.</p>
+<p><b>Future Directions: Publishing Checksums</b></p>
+<p>Libraries&#8217; ability to represent precisely and accurately which datasets, or components of datasets, have been preserved is a serious impediment to embarking on a distributed repository / data-rescue project. Further, libraries need to know if data objects have been preserved and where they reside. To return to the earlier example, how is New York University to know that a particular government dataset has already been &#8220;rescued&#8221; and is being preserved (either via a publicly-accessible repository interface, or not)?</p>
+<p>Moreover, even if there is a venue for institutions to discuss which government datasets fall within their collection priorities (e.g. &#8220;New York University cares about federal forestry data, and therefore will be responsible for the stewardship of that data&#8221;), it&#8217;s not clear that there is a good strategy for representing the myriad ways in which the data might exist in its &#8220;rescued&#8221; form. Perhaps the institution that elects to preserve a dataset wants to make a few curatorial decisions in order to better contextualize the data with the rest of the institution&#8217;s offerings (as we did with the Forest Service data). These types of decisions are not abnormal in the context of library accessioning.</p>
+<p>The problem comes when data processing practices of an institution, which are often idiosyncratic and filled with &#8220;local&#8221; decisions to a certain degree, start to inhibit the ability for individuals to identify a copy of a dataset in the capacity of a copy. There is a potential tension between preservation –– preserving the original file structure, naming conventions, and even level of dissemination of government data products –– and discovery, where libraries often make decisions about the most useful way for users to find relevant data that are in conflict with the decisions exhibited in the source files.</p>
+<p>For the purposes of mitigating the problem sketched above, we propose a data store that can be drawn upon by all members of the library / data-rescue community, whereby the arbitrary or locally-specific mappings and organizational decisions can be related back to original checksums of individual, atomic, files. File checksums would be unique identifiers in such a datastore, and given a checksum, this service would display &#8220;claims&#8221; about institutions that hold the corresponding file, and the context in which that file is accessible.</p>
+<p>Consider this as an example:</p>
+<ul>
+<li>New York University, as part of an intentional data rescue effort, decides to focus on collecting and preserving data from the U.S. Forest Service.</li>
+<li>The documents and data from Forest Service are accessible through many venues:
+<ul>
+<li>They (or some subset) are linked to from a Data.gov record</li>
+<li>They (or some subset) are linked to directly from the <a href="https://data.fs.usda.gov/geodata/">FSGeodata Clearinghouse</a></li>
+<li>They are available directly from a geoservices or FTP endpoint maintained by the Forest Service (such as <a href="https://apps.fs.usda.gov/arcx/rest/services/EDW">here</a>).</li>
+</ul>
+</li>
+<li>NYU wants a way to grab all of the documents from the Forest Service that it is aware of and make those documents available in an online repository. The question is, if NYU has made organizational and curatorial decisions about the presentation of documents rescued, how can it be represented (to others) that the files in the repository are indeed preserved copies of other datasets? If, for instance, Purdue University comes along and wants to verify that everything on the Forest Service&#8217;s site is preserved somewhere, it now becomes more difficult to do so, particularly since those documents never possessed a canonical or authoritative ID in the first place, and even could have been downloaded originally from various source URLs.</li>
+</ul>
+<p>Imagine instead that as NYU accessions documents ––restructuring them and adding metadata –– they not only create checksum manifests (similar to, if not even identical to the ones created by default by <a href="https://en.wikipedia.org/wiki/BagIt">BagIt</a>), but also deposit those manifests to a centralized data store in such a form that the data store could now relate essential information:</p>
+<p style="padding-left: 30px;">The file with checksum <code>8a53c3c191cd27e3472b3e717e3c2d7d979084b74ace0d1e86042b11b56f2797</code> appears in as a component of the document <code>instituton_a_9876...</code> held by <code>New York University.</code></p>
+<p>Assuming all checksums are computed at the lowest possible level on files rescued from Federal agencies (i.e., always unzip archives, or otherwise get to an atomic file before computing a checksum), such a service could use archival manifest data as a way to signal to other institutions if a file has been preserved, regardless of whether or not it exists as a smaller component of a different intellectual entity –– and it could even communicate additional data about where to find these preserved copies. In the example of the dataset mentioned above, the original Data.gov record represents 8 distinct resources, including a Shapefile, a geodatabase, an XML metadata document, an HTML file that links to an API, and more. For the sake of preservation, we could package all of these items, generate checksums for each, and then take a further step in contributing our manifest to this hypothetical datastore. Then, as other institutions look to save other data objects, they could search against this datastore and find not merely checksums of items at the <em>package</em> level, but actually at the package component level, allowing them to evaluate which portion or percentage of data has been preserved.</p>
+<p>A system such as the one sketched above could efficiently communicate preservation priorities to a community of practice, and even find use for more general collection-development priorities of a library. Other work in this field, particularly that regarding IPFS, could tie in nicely –– but unlike IPFS, this would provide a way to identify content that exists within file archives, and would not necessitate any new infrastructure for hosting material. All it would require is for an institution to contribute checksum manifests and a small amount of accompanying metadata to a central datastore.</p>
+<p><b>Principles</b></p>
+<p><span style="font-weight: 400;">Even though our rescue of the Forest Service data is still in process, we have learned a lot about the challenges associated with this project. We’re very interested in learning about how other institutions are handling the process of rescuing federal data and look forward to more discussions at the event in Washington D.C. on May 8.</span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

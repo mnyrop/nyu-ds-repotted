@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HTTPS &#8211; Data Dispatch</title>
+	<atom:link href="https://data-services.hosting.nyu.edu/tag/https/feed/" rel="self" type="application/rss+xml" />
+	<link>https://data-services.hosting.nyu.edu</link>
+	<description>NYU Data Services News and Updates</description>
+	<lastBuildDate>Fri, 19 Feb 2016 19:05:07 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.12</generator>
+
+<image>
+	<url>https://data-services.hosting.nyu.edu/wp-content/uploads/2017/07/DS-icon.png</url>
+	<title>HTTPS &#8211; Data Dispatch</title>
+	<link>https://data-services.hosting.nyu.edu</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Protecting geo.nyu.edu Traffic with HTTPS</title>
+		<link>https://data-services.hosting.nyu.edu/protecting-geo-nyu-edu-traffic-with-https/</link>
+		
+		<dc:creator><![CDATA[Stephen Balogh]]></dc:creator>
+		<pubDate>Fri, 19 Feb 2016 19:01:43 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[data security]]></category>
+		<category><![CDATA[HTTPS]]></category>
+		<category><![CDATA[Spatial Data Repository]]></category>
+		<guid isPermaLink="false">http://data-services.hosting.nyu.edu/?p=416</guid>
+
+					<description><![CDATA[This collects some reflections on challenges associated with web security and the use of HTTPS, taking work on our Spatial Data Repository as an example.]]></description>
+										<content:encoded><![CDATA[<p>Using the <a href="https://en.wikipedia.org/wiki/HTTPS">HTTPS protocol</a> for websites, instead of its older parent protocol, HTTP, offers significantly more protection and privacy for all parties involved in a web transaction. HTTPS is a version of HTTP –– the protocol that allows us to connect to websites in an internet browser –– that encrypts all traffic uploaded or downloaded between a server and its client (you).</p>
+<p>What exactly does this mean in practice? If you are surfing on a site via the HTTP protocol, then all of the data that is transmitted to or from that site is, by default, sent in an unencrypted form. This doesn&#8217;t necessarily mean that your data is exposed for others to see, but it does mean that anyone who is in a position to intercept the <a href="https://en.wikipedia.org/wiki/Network_packet">packets</a> sent between you and the server might be able to see exactly what data was exchanged.</p>
+<p>Our <a href="https://geo.nyu.edu">Spatial Data Repository</a> at Data Services has supported HTTPS connections, but up until very recently, only the connection between the server that runs the repository and the user who accesses it was encrypted. Some of the external sources of data, loaded when a user accesses a SDR record, still used the HTTP protocol.</p>
+<p>To understand this better, consider the fact that most websites are in reality a combination of content from disparate sources; some of the sources are hosted locally, on the same site you navigated to in your browser, and some are hosted externally. (If you&#8217;re interested in investigating the origin of content on any site, try playing around with the &#8220;Network&#8221; section of the <a href="https://developer.chrome.com/devtools/docs/network">Chrome browser&#8217;s Developer Tools</a>). This combination of sources certainly characterizes content found on the Spatial Data Repository; accessing any page on the SDR requires a user to load content from a variety of other servers. And this is where our problem was located –– even though geo.nyu.edu was protected by HTTPS, the feature on the site that allows users to preview map extents had to make use of an unencrypted HTTP connection to our map servers. And as a result, the security of the site was a little less than ideal –– maybe even particularly so, since the website suggests that the SDR is entirely secure just by virtue of the fact that its domain begins with an &#8220;https://&#8221;!</p>
+<figure id="attachment_417" aria-describedby="caption-attachment-417" style="width: 300px" class="wp-caption alignnone"><a href="http://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.40.32-PM.png" rel="attachment wp-att-417"><img loading="lazy" class="size-medium wp-image-417" src="http://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.40.32-PM-300x62.png" alt="Chrome's representation of a secure HTTPS site" width="300" height="62" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.40.32-PM-300x62.png 300w, https://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.40.32-PM.png 400w" sizes="(max-width: 300px) 85vw, 300px" /></a><figcaption id="caption-attachment-417" class="wp-caption-text">Chrome&#8217;s green padlock icon for a secure HTTPS site</figcaption></figure>
+<p>A good illustration of why this can be risky is the following.</p>
+<p>With HTTPS content, the encryption works in such a way that all data sent between a client and a server appears completely unintelligible when viewed by a third party. This is why virtually all e-commerce sites use HTTPS –– even if a connection is compromised, your passwords and bank details are safe. I wanted to see what an attacker might see should they be able to intercept traffic between a user and the Spatial Data Repository. Using software that analyzes network packets (I used <a href="http://packetpeeper.org/">Packet Peeper</a>, but there are a ton of these) I took a look at some traffic collected as I browsed around records.</p>
+<p>Whenever I browsed a page directly hosted by the SDR, the traffic was, as expected, unintelligible:</p>
+<figure id="attachment_423" aria-describedby="caption-attachment-423" style="width: 224px" class="wp-caption alignnone"><a href="http://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.57.53-PM.png" rel="attachment wp-att-423"><img loading="lazy" class="size-medium wp-image-423" src="http://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.57.53-PM-224x300.png" alt="An example of a network packet sent via an encrypted HTTPS connection" width="224" height="300" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.57.53-PM-224x300.png 224w, https://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.57.53-PM.png 702w" sizes="(max-width: 224px) 85vw, 224px" /></a><figcaption id="caption-attachment-423" class="wp-caption-text">An example of a network packet sent via an encrypted HTTPS connection</figcaption></figure>
+<p>But when I kept looking, I eventually found some traffic that was sent out to an external service via HTTP. Looking carefully, you can see the name of the map I requested, and even which subset of it I was particularly interested in:</p>
+<figure id="attachment_418" aria-describedby="caption-attachment-418" style="width: 411px" class="wp-caption alignnone"><a href="http://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.20.14-PM.png" rel="attachment wp-att-418"><img loading="lazy" class="wp-image-418" src="http://data-services.hosting.nyu.edu/wp-content/uploads/2016/02/Screen-Shot-2016-02-18-at-5.20.14-PM-300x226.png" alt="Screen Shot 2016-02-18 at 5.20.14 PM" width="411" height="309" /></a><figcaption id="caption-attachment-418" class="wp-caption-text">Not encrypted! A look inside a regular packet from HTTP (visualized in Packet Peeper)</figcaption></figure>
+<p>Even though my activity on the main page was encrypted, the simple fact that one of the associated connections made from the page was not encrypted meant that anyone in a position to intercept network traffic could deduce a lot about how I was using the site.</p>
+<p>Would this be the end of the world? No. But do I think it&#8217;s an important security consideration that might be overlooked in other contexts? Yes! And luckily, it is now the case that all (<em>knock on wood</em>) external connections made from pages on geo.nyu.edu will be served up via HTTPS.</p>
+<p>Stay green, ol&#8217; padlock!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

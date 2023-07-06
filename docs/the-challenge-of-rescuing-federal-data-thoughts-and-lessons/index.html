@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- Mirrored from data-services.hosting.nyu.edu/the-challenge-of-rescuing-federal-data-thoughts-and-lessons/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Jul 2023 17:38:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>The Challenge of Rescuing Federal Data: Thoughts and Lessons &#8211; Data Dispatch</title>
+<link rel='dns-prefetch' href='http://cdn.plot.ly/' />
+<link rel='dns-prefetch' href='http://unpkg.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Data Dispatch &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Data Dispatch &raquo; Comments Feed" href="../comments/feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/data-services.hosting.nyu.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.12"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../wp-includes/css/dist/block-library/style.min422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../wp-includes/css/dist/block-library/theme.min422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='../wp-content/plugins/jquery-collapse-o-matic/light_stylef24c.css?ver=1.6' media='all' />
+<link rel='stylesheet' id='PVGM-swipe-css-css'  href='../wp-content/plugins/photo-video-gallery-master/lightbox/swipebox/swipebox422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='PVGM-boot-strap-css-css'  href='../wp-content/plugins/photo-video-gallery-master/css/bootstrap422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='pvgm-effects-css-css'  href='../wp-content/plugins/photo-video-gallery-master/css/pvgm-effects422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='tp_twitter_plugin_css-css'  href='../wp-content/plugins/recent-tweets-widget/tp_twitter_plugin5152.css?ver=1.0' media='screen' />
+<link rel='stylesheet' id='theme-my-login-css'  href='../wp-content/plugins/theme-my-login/assets/styles/theme-my-login.min03db.css?ver=7.1.1' media='all' />
+<link rel='stylesheet' id='wpa-style-css'  href='../wp-content/plugins/wp-accessibility/css/wpa-style422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='ez-icomoon-css'  href='../wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min3c89.css?ver=2.0.11' media='all' />
+<link rel='stylesheet' id='ez-toc-css'  href='../wp-content/plugins/easy-table-of-contents/assets/css/screen.min3c89.css?ver=2.0.11' media='all' />
+<style id='ez-toc-inline-css'>
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}
+</style>
+<link rel='stylesheet' id='parent-style-css'  href='../wp-content/themes/twentysixteen/style422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../wp-content/themes/data-services-theme/style422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../wp-content/themes/twentysixteen/genericons/genericons5589.css?ver=3.4.1' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../wp-content/themes/data-services-theme/style8d89.css?ver=20190507' media='all' />
+<style id='twentysixteen-style-inline-css'>
+	/* Color Scheme */
+
+	/* Background Color */
+	body {
+		background-color: #ffffff;
+	}
+
+	/* Page Background Color */
+	.site {
+		background-color: #ff675f;
+	}
+
+	mark,
+	ins,
+	button,
+	button[disabled]:hover,
+	button[disabled]:focus,
+	input[type="button"],
+	input[type="button"][disabled]:hover,
+	input[type="button"][disabled]:focus,
+	input[type="reset"],
+	input[type="reset"][disabled]:hover,
+	input[type="reset"][disabled]:focus,
+	input[type="submit"],
+	input[type="submit"][disabled]:hover,
+	input[type="submit"][disabled]:focus,
+	.menu-toggle.toggled-on,
+	.menu-toggle.toggled-on:hover,
+	.menu-toggle.toggled-on:focus,
+	.pagination .prev,
+	.pagination .next,
+	.pagination .prev:hover,
+	.pagination .prev:focus,
+	.pagination .next:hover,
+	.pagination .next:focus,
+	.pagination .nav-links:before,
+	.pagination .nav-links:after,
+	.widget_calendar tbody a,
+	.widget_calendar tbody a:hover,
+	.widget_calendar tbody a:focus,
+	.page-links a,
+	.page-links a:hover,
+	.page-links a:focus {
+		color: #ff675f;
+	}
+
+	/* Link Color */
+	.menu-toggle:hover,
+	.menu-toggle:focus,
+	a,
+	.main-navigation a:hover,
+	.main-navigation a:focus,
+	.dropdown-toggle:hover,
+	.dropdown-toggle:focus,
+	.social-navigation a:hover:before,
+	.social-navigation a:focus:before,
+	.post-navigation a:hover .post-title,
+	.post-navigation a:focus .post-title,
+	.tagcloud a:hover,
+	.tagcloud a:focus,
+	.site-branding .site-title a:hover,
+	.site-branding .site-title a:focus,
+	.entry-title a:hover,
+	.entry-title a:focus,
+	.entry-footer a:hover,
+	.entry-footer a:focus,
+	.comment-metadata a:hover,
+	.comment-metadata a:focus,
+	.pingback .comment-edit-link:hover,
+	.pingback .comment-edit-link:focus,
+	.comment-reply-link,
+	.comment-reply-link:hover,
+	.comment-reply-link:focus,
+	.required,
+	.site-info a:hover,
+	.site-info a:focus {
+		color: #640c1f;
+	}
+
+	mark,
+	ins,
+	button:hover,
+	button:focus,
+	input[type="button"]:hover,
+	input[type="button"]:focus,
+	input[type="reset"]:hover,
+	input[type="reset"]:focus,
+	input[type="submit"]:hover,
+	input[type="submit"]:focus,
+	.pagination .prev:hover,
+	.pagination .prev:focus,
+	.pagination .next:hover,
+	.pagination .next:focus,
+	.widget_calendar tbody a,
+	.page-links a:hover,
+	.page-links a:focus {
+		background-color: #640c1f;
+	}
+
+	input[type="date"]:focus,
+	input[type="time"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="week"]:focus,
+	input[type="month"]:focus,
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="number"]:focus,
+	textarea:focus,
+	.tagcloud a:hover,
+	.tagcloud a:focus,
+	.menu-toggle:hover,
+	.menu-toggle:focus {
+		border-color: #640c1f;
+	}
+
+	/* Main Text Color */
+	body,
+	blockquote cite,
+	blockquote small,
+	.main-navigation a,
+	.menu-toggle,
+	.dropdown-toggle,
+	.social-navigation a,
+	.post-navigation a,
+	.pagination a:hover,
+	.pagination a:focus,
+	.widget-title a,
+	.site-branding .site-title a,
+	.entry-title a,
+	.page-links > .page-links-title,
+	.comment-author,
+	.comment-reply-title small a:hover,
+	.comment-reply-title small a:focus {
+		color: #402b30;
+	}
+
+	blockquote,
+	.menu-toggle.toggled-on,
+	.menu-toggle.toggled-on:hover,
+	.menu-toggle.toggled-on:focus,
+	.post-navigation,
+	.post-navigation div + div,
+	.pagination,
+	.widget,
+	.page-header,
+	.page-links a,
+	.comments-title,
+	.comment-reply-title {
+		border-color: #402b30;
+	}
+
+	button,
+	button[disabled]:hover,
+	button[disabled]:focus,
+	input[type="button"],
+	input[type="button"][disabled]:hover,
+	input[type="button"][disabled]:focus,
+	input[type="reset"],
+	input[type="reset"][disabled]:hover,
+	input[type="reset"][disabled]:focus,
+	input[type="submit"],
+	input[type="submit"][disabled]:hover,
+	input[type="submit"][disabled]:focus,
+	.menu-toggle.toggled-on,
+	.menu-toggle.toggled-on:hover,
+	.menu-toggle.toggled-on:focus,
+	.pagination:before,
+	.pagination:after,
+	.pagination .prev,
+	.pagination .next,
+	.page-links a {
+		background-color: #402b30;
+	}
+
+	/* Secondary Text Color */
+
+	/**
+	 * IE8 and earlier will drop any block with CSS3 selectors.
+	 * Do not combine these styles with the next block.
+	 */
+	body:not(.search-results) .entry-summary {
+		color: #402b30;
+	}
+
+	blockquote,
+	.post-password-form label,
+	a:hover,
+	a:focus,
+	a:active,
+	.post-navigation .meta-nav,
+	.image-navigation,
+	.comment-navigation,
+	.widget_recent_entries .post-date,
+	.widget_rss .rss-date,
+	.widget_rss cite,
+	.site-description,
+	.author-bio,
+	.entry-footer,
+	.entry-footer a,
+	.sticky-post,
+	.taxonomy-description,
+	.entry-caption,
+	.comment-metadata,
+	.pingback .edit-link,
+	.comment-metadata a,
+	.pingback .comment-edit-link,
+	.comment-form label,
+	.comment-notes,
+	.comment-awaiting-moderation,
+	.logged-in-as,
+	.form-allowed-tags,
+	.site-info,
+	.site-info a,
+	.wp-caption .wp-caption-text,
+	.gallery-caption,
+	.widecolumn label,
+	.widecolumn .mu_register label {
+		color: #402b30;
+	}
+
+	.widget_calendar tbody a:hover,
+	.widget_calendar tbody a:focus {
+		background-color: #402b30;
+	}
+
+	/* Border Color */
+	fieldset,
+	pre,
+	abbr,
+	acronym,
+	table,
+	th,
+	td,
+	input[type="date"],
+	input[type="time"],
+	input[type="datetime-local"],
+	input[type="week"],
+	input[type="month"],
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
+	textarea,
+	.main-navigation li,
+	.main-navigation .primary-menu,
+	.menu-toggle,
+	.dropdown-toggle:after,
+	.social-navigation a,
+	.image-navigation,
+	.comment-navigation,
+	.tagcloud a,
+	.entry-content,
+	.entry-summary,
+	.page-links a,
+	.page-links > span,
+	.comment-list article,
+	.comment-list .pingback,
+	.comment-list .trackback,
+	.comment-reply-link,
+	.no-comments,
+	.widecolumn .mu_register .mu_alert {
+		border-color: #402b30; /* Fallback for IE7 and IE8 */
+		border-color: rgba( 64, 43, 48, 0.2);
+	}
+
+	hr,
+	code {
+		background-color: #402b30; /* Fallback for IE7 and IE8 */
+		background-color: rgba( 64, 43, 48, 0.2);
+	}
+
+	@media screen and (min-width: 56.875em) {
+		.main-navigation li:hover > a,
+		.main-navigation li.focus > a {
+			color: #640c1f;
+		}
+
+		.main-navigation ul ul,
+		.main-navigation ul ul li {
+			border-color: rgba( 64, 43, 48, 0.2);
+		}
+
+		.main-navigation ul ul:before {
+			border-top-color: rgba( 64, 43, 48, 0.2);
+			border-bottom-color: rgba( 64, 43, 48, 0.2);
+		}
+
+		.main-navigation ul ul li {
+			background-color: #ff675f;
+		}
+
+		.main-navigation ul ul:after {
+			border-top-color: #ff675f;
+			border-bottom-color: #ff675f;
+		}
+	}
+
+
+		/* Custom Page Background Color */
+		.site {
+			background-color: #ffffff;
+		}
+
+		mark,
+		ins,
+		button,
+		button[disabled]:hover,
+		button[disabled]:focus,
+		input[type="button"],
+		input[type="button"][disabled]:hover,
+		input[type="button"][disabled]:focus,
+		input[type="reset"],
+		input[type="reset"][disabled]:hover,
+		input[type="reset"][disabled]:focus,
+		input[type="submit"],
+		input[type="submit"][disabled]:hover,
+		input[type="submit"][disabled]:focus,
+		.menu-toggle.toggled-on,
+		.menu-toggle.toggled-on:hover,
+		.menu-toggle.toggled-on:focus,
+		.pagination .prev,
+		.pagination .next,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.pagination .nav-links:before,
+		.pagination .nav-links:after,
+		.widget_calendar tbody a,
+		.widget_calendar tbody a:hover,
+		.widget_calendar tbody a:focus,
+		.page-links a,
+		.page-links a:hover,
+		.page-links a:focus {
+			color: #ffffff;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation ul ul li {
+				background-color: #ffffff;
+			}
+
+			.main-navigation ul ul:after {
+				border-top-color: #ffffff;
+				border-bottom-color: #ffffff;
+			}
+		}
+	
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #cc0000;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #cc0000;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #cc0000;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #cc0000;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<script src='../wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script src='../wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4' id='jquery-ui-core-js'></script>
+<script src='../wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4' id='jquery-ui-widget-js'></script>
+<script src='../wp-includes/js/jquery/ui/mouse.mine899.js?ver=1.11.4' id='jquery-ui-mouse-js'></script>
+<script src='../wp-includes/js/jquery/ui/draggable.mine899.js?ver=1.11.4' id='jquery-ui-draggable-js'></script>
+<script src='../wp-content/plugins/before-after/js/jquery.beforeafter-1.3.instruite.min422b.js?ver=5.5.12' id='jquery-before-after-js'></script>
+<script src='../wp-content/plugins/photo-video-gallery-master/lightbox/swipebox/jquery.swipebox.min422b.js?ver=5.5.12' id='PVGM-swipe-js-js'></script>
+<!--[if lt IE 9]>
+<script src='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/posts/995.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='HathiTrust Research Center Seeks Proposals for Advanced Collaborative Support Projects' href='https://www.hathitrust.org/htrc_sp17_acs-rfp#new_tab' />
+<link rel='next' title='Five Things We Learned at &#8230; LOEX 2017' href='../five-things-i-learned-at-loex-2017/index.html' />
+<meta name="generator" content="WordPress 5.5.12" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../indexac83.html?p=995' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed171c.json?url=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Fthe-challenge-of-rescuing-federal-data-thoughts-and-lessons%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed6b82?url=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Fthe-challenge-of-rescuing-federal-data-thoughts-and-lessons%2F&amp;format=xml" />
+			<style type="text/css">
+				.ba-container {
+					margin-left:auto;
+					margin-right:auto;
+				}
+				.ba-container + div.balinks {
+					margin: 0 auto;
+				}
+				.ba-container div img {
+					max-width: none;
+				}
+			</style>
+<link rel="icon" href="../wp-content/uploads/2017/07/DS-icon.png" sizes="32x32" />
+<link rel="icon" href="../wp-content/uploads/2017/07/DS-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../wp-content/uploads/2017/07/DS-icon.png" />
+<meta name="msapplication-TileImage" content="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/07/DS-icon.png" />
+        <style> 
+           @media screen and (min-width: 320px) and (max-width:720px) {
+                .column {width:100%;}}
+           @media screen and (min-width: 320px) and (max-width:720px) {
+                #one {width:100%;} #two {width:100%;} #three {width:100%;} #four {width:100%;}}
+           @media screen and (min-width: 320px) and (max-width:720px) {
+                .midcolumn {width:100%;}}
+           .site-header {padding:  3.125em 2.6923% 1em 2.6923%;}
+           .entry-content {margin: 1%;}
+           @media screen and (min-width: 320px) and (max-width:720px) {.entry-content {margin:0; width:100%;}}
+           .site-title-banner a:link, a:visited, a:hover {color: #cc0000;}
+        </style>
+	<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75143906-1', 'auto');
+  ga('send', 'pageview');
+</script>   
+
+</head>
+
+<body class="post-template-default single single-post postid-995 single-format-standard wp-embed-responsive group-blog">
+
+<div id="page" class="site">
+<aside id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
+			<div class="widget-area">
+			<section id="search-2" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://data-services.hosting.nyu.edu/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</section>		</div><!-- .widget-area -->
+	
+			<div class="widget-area">
+			<section id="text-2" class="widget widget_text">			<div class="textwidget"><nav class="social-navigation"><ul class="social-links-menu"><li><a href="https://twitter.com/nyudataservices"></a></li><li><a href="../login.html"></a></li></ul></nav></div>
+		</section>		</div><!-- .widget-area -->
+	</aside><!-- .content-bottom-widgets -->
+<div class="header-bg">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header id="masthead" class="site-header" role="banner">
+                      
+
+
+
+			<a href="../index.html" alt="Return to home page" rel="home"><div class="site-header-main">
+                                <div id="bannerplot" class="site-banner-plot" style="height: 200px; width: 300px;"></div><!-- FP Plot -->
+				<div class="site-branding">
+                                
+			    
+						<h1 class="site-title-banner-main">Data Dispatch</h1>
+				
+                    						<p class="site-description">NYU Data Services News and Updates</p>
+											
+				</div><!-- .site-branding -->
+				
+			</div></a><!-- .site-header-main -->
+
+		</header><!-- .site-header -->
+
+		<div id="content" class="site-content" style="padding: 0px;"> <!--makes content area full-width-->
+		
+		
+<div id="primary" class="content-area" style="margin: 50px 0 0 50px; width: 70%;">
+	<main id="main" class="site-main" role="main">
+		
+<article id="post-995" class="post-995 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-data-refuge tag-data-rescue tag-discovery tag-hud tag-preservation tag-sha256">
+	<header class="entry-header">
+		<h1 class="entry-title">The Challenge of Rescuing Federal Data: Thoughts and Lessons</h1>	</header><!-- .entry-header -->
+	
+	
+
+	<div class="entry-content">
+		<p><strong>By Andrew Battista and Stephen Balogh</strong></p>
+<p><span style="font-weight: 400;">Recently, we experienced another panic over the ideological attack on scientific data. Rumors circulated that the EPA website, including all of the data it hosts, would be taken down. This</span><span style="font-weight: 400;"> </span><span style="font-weight: 400;"><a href="https://medium.com/@BernHyland/us-epa-orders-turn-off-of-open-data-service-on-28-apr-2017-586cd65fdb14">appears to be just a rumor</a>,</span><span style="font-weight: 400;"> for now. The current presidential administration notwithstanding, efforts to rescue data underscores what many people in the library community have known all along: even if federal data won&#8217;t abscond into thin air, much of it is poorly organized, partially documented, and effectively undiscoverable. Libraries can improve access to government data and should develop workflows for preserving federal data to make it more accessible.</span></p>
+<p><span style="font-weight: 400;">Data rescue <a href="https://www.wired.com/2017/01/rogue-scientists-race-save-climate-data-trump/">efforts began in January 2017</a>, and over the past few months many institutions hosted hack-a-thon style events to scrape data and develop strategies for preservation. The Environmental Data &amp; Governance Initiative (EDGI) developed a <a href="https://envirodatagov.org/event-toolkit/">data rescue toolkit</a>, which apportioned the challenge of saving data by distinct federal agency. </span><span style="font-weight: 400;">The efforts of <a href="https://www.datarefuge.org/">Data Refuge</a>, a group based at Penn seeking to establish best practices for data rescue and preservation, have been written about in a number of places, <a href="../saving-data-preservation-during-political-turmoil/index.html">including this blog</a>. </span></p>
+<p><span style="font-weight: 400;">W</span>e&#8217;ve had a number of conversations at NYU and with other members of the library community about the implications of preserving federal data and providing access to it. The efforts, while important, call attention to a problem of organization that is very large in scope and likely cannot be solved in full by libraries.</p>
+<figure id="attachment_996" aria-describedby="caption-attachment-996" style="width: 632px" class="wp-caption alignnone"><a href="../wp-content/uploads/2017/04/starfish_story.png"><img loading="lazy" class="wp-image-996 size-full" src="../wp-content/uploads/2017/04/starfish_story.png" alt="" width="632" height="350" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/starfish_story.png 632w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/starfish_story-300x166.png 300w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px" /></a><figcaption id="caption-attachment-996" class="wp-caption-text">Also a metaphor for preserving federal data</figcaption></figure>
+<p>Thus far, the divide-and-conquer model has postulated that individual institutions can &#8220;claim&#8221; a specific federal agency, do a deep dive to root around its websites, download data, and then mark the agency off a list as &#8220;preserved.&#8221; The process raises many questions, for libraries and for the data refuge movement. What does it mean to &#8220;claim&#8221; a federal agency? How can one institution reasonably develop a &#8220;chain of custody&#8221; for an agency&#8217;s comprehensive collection of data (and how do we define chain of custody)?</p>
+<p>How do we avoid duplicated labor? Overlap is inevitable and isn&#8217;t necessarily a bad thing, but given the scope of the challenge, it would be ideal to distribute efforts so as to benefit from the hard work of metadata remediation that all of us will inevitably do.</p>
+<p>These questions suggest even more questions about communication. How do we know when a given institution has preserved federal data, and at what point do we feel ready as a community to acknowledge that preservation has sufficiently taken place? Further, do we expect institutions to communicate that a piece of data has been published, and if so, by what means? What does preservation mean, especially in an environment where data is changing frequently, and what is the standard for discovery? Is it sufficient for one person or institution to download a file and save it? And when an institution claims that it has “rescued” data from a government agency, what commitment does it have to keep up with data refreshes on a regular basis?</p>
+<p>An example of an attempt to engage with these issues is Stanford University’s recent decision to preserve the <a href="https://earthworks.stanford.edu/?page=1&amp;per_page=100&amp;q=United+States.+Department+of+Housing+and+Urban+Development">Housing and Urban Development spatial datasets</a>, since they were directly attacked by Republican lawmakers. Early in the Spring 2017 semester, Stanford downloaded all of HUD&#8217;s spatial data, created metadata records for them, and loaded them into their spatial discovery environment (<a href="https://earthworks.stanford.edu/">EarthWorks</a>).</p>
+<figure id="attachment_1008" aria-describedby="caption-attachment-1008" style="width: 840px" class="wp-caption alignnone"><img loading="lazy" class="wp-image-1008 size-large" src="../wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-1024x1015.png" alt="" width="840" height="833" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-1024x1015.png 1024w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-150x150.png 150w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-300x297.png 300w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks-768x761.png 768w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/05/Public-Housing-Authorities-2016-in-EarthWorks.png 1170w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /><figcaption id="caption-attachment-1008" class="wp-caption-text">A HUD dataset preserved in Stanford&#8217;s Spatial Data Repository and digital collections</figcaption></figure>
+<p>We can see from the <a href="https://earthworks.stanford.edu/catalog/stanford-jp095bg5089.json">timestamp on their metadata record</a> that the files were added on March 24, 2017. Stanford&#8217;s collection process is very robust and implies a level of curation and preservation that is impressive. As colleagues, we know that by adding a file, Stanford has committed to preserving it in its institutional repository, presenting original FGDC or ISO 19139 metadata records, and publishing their newly created records to <a href="https://github.com/OpenGeoMetadata">OpenGeoMetadata</a>, a consortium of shared geospatial metadata records. Furthermore, we know that all records are discoverable at the layer level, which suggests a granularity in description and access that often is not present at many other sources, including Data.gov.</p>
+<p>However, if I had not had conversations with colleagues who work at Stanford, I wouldn&#8217;t have realized they preserved the files at all and likely would&#8217;ve tried to make records for <a href="https://geo.nyu.edu/">NYU&#8217;s Spatial Data Repository</a>. Even as they exist, it&#8217;s difficult for me to know that these files were in fact saved as part of the Data Refuge effort. Furthermore, Stanford has made no public claim or longterm &#8220;chain of custody&#8221; agreement for HUD data, simply because no standards for doing so currently exist.</p>
+<p>Maybe it wouldn&#8217;t be the worst thing for NYU to add these files to our repository, but it seems unnecessary, given the magnitude of federal data to be preserved. However, some redundancy is a part of the <a href="https://www.datarefuge.org/about">goals that Data Refuge imagines</a>:</p>
+<blockquote><p>Data collected as part of the #DataRefuge initiative will be stored in multiple, trusted locations to help ensure continued accessibility. [&#8230;]DataRefuge acknowledges&#8211;and in fact draws attention to&#8211;the fact that there are no guarantees of perfectly safe information. But there are ways that we can create safe and trustworthy copies. DataRefuge is thus also a project to develop the best methods, practices, and protocols to do so.</p></blockquote>
+<p>Each institution has specific curatorial needs and responsibilities, which imply choices about providing access to materials in library collections. These practices seldom coalesce with data management and publishing practices from those who work with federal agencies. There has to be some flexibility between community efforts to preserve data, individual institutions and their respective curation practices.</p>
+<p><b>&#8220;That&#8217;s Where the Librarians Come In&#8221;</b></p>
+<p><span style="font-weight: 400;">NYU imagines a model that dovetails with the Data Refuge effort in which individual institutions build upon their own strengths and existing infrastructure. We took as a directive some advice that Kimberly Eke at Penn circulated, <a href="https://hackmd.io/BwQwJgxhYEYJwFoBsBGSCAswkgSOA7AQjPhMAKwrADMcYNQA">including this sample protocol</a>. </span><span style="font-weight: 400;">We quickly began to realize that no approach is perfect, but we wanted to develop a pilot process for collecting data and bringing it into our permanent geospatial data holdings. The remainder of this post is a narrative of that experience in order to demonstrate some of the choices we made, assumptions we started with, and strategies we deployed to preserve federal data. Our goal is to preserve a small subset of data in a way that benefits our users and also meets the standards of the Data Refuge movement.</span></p>
+<p><img loading="lazy" class="wp-image-1000 size-medium alignleft" src="../wp-content/uploads/2017/04/FS_green-273x300.png" alt="" width="273" height="300" srcset="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/FS_green-273x300.png 273w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/FS_green-768x843.png 768w, https://data-services.hosting.nyu.edu/wp-content/uploads/2017/04/FS_green.png 850w" sizes="(max-width: 273px) 85vw, 273px" /></p>
+<p>We began by collecting the entirety of publicly accessible metadata from <a href="http://data.gov/">Data.gov</a>, using the underlying the <a href="http://docs.ckan.org/en/latest/api/">CKAN data catalog API</a>. This provided us with approximately 150,000 metadata records, stored as individual JSON files. Anyone who has worked with Data.gov metadata knows that it’s messy and inconsistent but is also a good starting place to develop better records. Furthermore, the concept of Data.gov serves as an effective registry or checklist <a href="https://github.com/datproject/svalbard">(this global metadata vault could be another starting place)</a>; it&#8217;s not the only source of government data, nor is it necessarily authoritative. However, it is a good point of departure, a relatively centralized list of items that exist in a form that we can work with.</p>
+<p>Since NYU Libraries already has a robust spatial data infrastructure and has established workflows for accessioning GIS data, we began by reducing the set of Data.gov records to those which are likely to represent spatial data. We did this by searching only for files that meet the following conditions:</p>
+<ul>
+<li>Record contains at least one download resource with a &#8216;format&#8217; field that contains any of {&#8216;shapefile&#8217;, &#8216;geojson&#8217;, &#8216;kml&#8217;, &#8216;kmz&#8217;}</li>
+<li>Record contains at least one resource with a &#8216;url&#8217; field that contains any of {&#8216;shapefile&#8217;, &#8216;geojson&#8217;, &#8216;kml&#8217;, [&#8216;original&#8217; followed by &#8216;.zip&#8217;]}</li>
+</ul>
+<p>That search generated 6,353 records that are extremely likely to contain geospatial data. From that search we <a href="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=856218329&amp;single=true">yielded a subset of records</a> and then transformed them into a .CSV:</p>
+<style type="text/css">
+       .errordiv { padding:10px; margin:10px; border: 1px solid #555555;color: #000000;background-color: #f8f8f8; width:500px; }#advanced_iframe {visibility:visible;opacity:1;vertical-align:top;}.ai-info-bottom-iframe { position: fixed; z-index: 10000; bottom:0; left: 0; margin: 0px; text-align: center; width: 100%; background-color: #ff9999; padding-left: 5px;padding-bottom: 5px; border-top: 1px solid #aaa }#ai-layer-div-advanced_iframe p {height:100%;margin:0;padding:0}</style><script type="text/javascript">  var ai_iframe_width_advanced_iframe = 0;  var ai_iframe_height_advanced_iframe = 0;var aiIsIe8=false;var aiOnloadScrollTop="true";
+if (typeof aiReadyCallbacks === 'undefined') {
+    var aiReadyCallbacks = [];  
+} else if (!(aiReadyCallbacks instanceof Array)) {
+    var aiReadyCallbacks = [];
+}    function aiShowIframeId(id_iframe) { jQuery("#"+id_iframe).css("visibility", "visible");    }    function aiResizeIframeHeight(height) { aiResizeIframeHeight(height,advanced_iframe); }    function aiResizeIframeHeightId(height,width,id) {aiResizeIframeHeightById(id,height);}</script><iframe id="advanced_iframe"  name="advanced_iframe"  src="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=856218329&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false"  width="100%"  height="600"  frameborder="0"  allowtransparency="true"  style=";width:100%;height:600px;" ></iframe><script type="text/javascript">var ifrm_advanced_iframe = document.getElementById("advanced_iframe");var hiddenTabsDoneadvanced_iframe = false;
+function resizeCallbackadvanced_iframe() {}function aiChangeUrl(loc) {}</script><script type="text/javascript"></script>
+<p>The next step was to filter down and look for meaningful patterns. We first filtered out all records that were not from federal sources, divided categories into like agencies, and started exploring them. Ultimately, we decided to rescue data from the Department of Agriculture, Forest Service. This agency seems to be a good test case for a number of the challenges that we’ve identified. We isolated 136 records and organized them <a href="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=1569491355&amp;single=true">here (click to view spreadsheet)</a>. However, we quickly realized that a sizable chunk of the records had already somehow become inactive or defunct after we had downloaded them (shaded in pink), perhaps because they had been superseded by another record. For example, <a href="http://catalog.data.gov/dataset/23c7852d-9e9e-47e5-b215-47028c1f094a">this record</a> is probably meant to represent the same <a href="http://catalog.data.gov/dataset/09d11982-4bb5-474e-a690-6874da1f6042">data as this record</a>. We can&#8217;t know for sure, which means we immediately had to decide what to do with potential gaps. We forged ahead with the records that were &#8220;live&#8221; in Data.gov.</p>
+<p><b>About Metadata Cleaning</b></p>
+<p>There are some limitations to the metadata in Data.gov that required our team to make a series of subjective decisions:</p>
+<ol>
+<li>Not everything in Data.gov points to an actual dataset. Often, records can point to other portals or clearinghouses of data that are not represented within Data.gov. We ultimately decided to omit these records from our data rescue effort, even if they point to a webpage, API, or geoservice that does contain some kind of data.</li>
+<li><span style="font-weight: 400;">The approach to establishing order on Data.gov is inconsistent. Most crucially for us, there is not a one-to-one correlation between a record and an individual layer of geospatial data. This happens frequently on federal sites. For instance, </span><a href="https://catalog.data.gov/dataset/77781e81-17d6-4f91-a2df-7dfc7cb33eef"><span style="font-weight: 400;">the record for the U.S. Forest Service Aerial Fire Retardant Hydrographic Avoidance Areas: Aquatic</span></a><span style="font-weight: 400;"> actually contains eight distinct shapefile layers that correspond to the different regions of coverage. NYU’s collection practice dictates that each of these layers be represented by a distinct record, but in the Data.gov catalog, they are condensed into a single record. </span></li>
+<li>Not all data providers publish records for data on Data.gov consistently. Many agencies point to some element of their data that exists, but when you leave the Data.gov catalog environment and go to the source URL listed in the resources section of the record, you’ll find even more data. We had to make decisions about whether or not (and how) we would include this kind of data.</li>
+<li>It’s very common that single Data.gov metadata records remain intact, but the data that they represent changes. The Forest Service is a good example of this, as files are frequently refreshed and maintained within the USDA Forestry <a href="https://data.fs.usda.gov/geodata/">geodata clearinghouse</a>. We did not make any effort in either of these cases to track down other sets of data that the Data.gov metadata records gesture toward (at least not at this time).</li>
+</ol>
+<p>Relatedly, we did not make attempts to provide original records for different formats of what appeared to be the same data. In the case of the Forest Service, many of the records contained both a shapefile and a geodatabase, as well as other original metadata files. Our general approach was to save the shapefile and publish it in our collection environment, then bundle up all other &#8220;data objects&#8221; associated with a discrete Data.gov record and include them in the preservation environment of our Spatial Data Repository.</p>
+<p>Finally, we realized that the quality of the metadata itself varies widely. We found that it’s a good starting place to creating metadata for discovery, even if we agree that a Data.gov record is an arbitrary way to describe a single piece of data. However, we had to clean the Data.gov records to adhere to the GeoBlacklight standard and our own internal cataloging practices. Here’s a snapshot of the metadata in process.</p>
+<pre><strong>Sample Record</strong>
+{
+dc_identifier_s: "http://hdl.handle.net/2451/12345",
+dc_title_s: "<span style="color: #ff0000;">2017 Aerial Fire Retardant Hydrographic Avoidance Areas: Aquatic - Region 1</span>",
+dc_description_s: "<span style="color: #ff0000;">This polygon layer depicts</span> aerial retardant avoidance areas for hydrographic feature data. Aerial retardant avoidance area for hydrographic feature data are based on high resolution National Hydrographic Dataset (NHD) produced by USGS and available from the USFS Enterprise Data Warehouse. Forests and/or regions have had the opportunity to modify the default NHD water representation (300ft buffer from all water features) for their areas of interest to accurately represent aerial fire retardant avoidance areas as described in the 2011 Record of Decision for the Nationwide Aerial Application of Fire Retardant on National Forest System Land EIS. These changes have been integrated into this dataset depicting aerial fire retardant avoidance areas for hydrographic features.The following process was used to develop the hydrographic areas to be avoided by aerial fire retardant. Using the FCODE attribute, streams/rivers/waterbodies are categorized into perennial and intermittent/ephemeral types. Linear features (streams &amp; rivers) FCODES 46003 and 46006 and polygonal features (lakes and other waterbody) FCODES 39001, 39005, 39006, 43612, 43614, 46601 are considered intermittentt/ephemeral features. All other FCODES are considered to be perennial features. Underground and covered water features (e.g., pipelines) are excluded. Initially, all intermittent/ephemeral and perennial features were buffered by 300 feet by the Forest/Region units. Subsequently, Forest/Region units may have extended these buffers locally based on their requirements. The resulting avoidance areas may have overlapping features due to the buffering processes.The National Hydrography Dataset (NHD) is a feature-based database that interconnects and uniquely identifies the stream segments or reaches that make up the nation's surface water drainage system. NHD data was originally developed at 1:100,000-scale and exists at that scale for the whole country. This high-resolution NHD, generally developed at 1:24,000/1:12,000 scale, adds detail to the original 1:100,000-scale NHD. (Data for Alaska, Puerto Rico and the Virgin Islands was developed at high-resolution, not 1:100,000 scale.) Local resolution NHD is being developed where partners and data exist. The NHD contains reach codes for networked features, flow direction, names, and centerline representations for areal water bodies. Reaches are also defined on waterbodies and the approximate shorelines of the Great Lakes, the Atlantic and Pacific Oceans and the Gulf of Mexico. The NHD also incorporates the National Spatial Data Infrastructure framework criteria established by the Federal Geographic Data Committee.<span style="color: #ff0000;">This layer was preserved from the Data.gov catalog as part of the Data Refuge effort (www.datarefuge.org) and is a representation of catalog item 77781e81-17d6-4f91-a2df-7dfc7cb33eef.</span> <span style="color: #ff0000;">Some modifications to the metadata have been made. Refer to the checksum manifest for a list of all original data objects associated with this item. Refer to the documentation for original metadata and information on the data.</span>",
+dc_rights_s: "Public",
+dct_provenance_s: "NYU",
+dct_references_s: "{"http://schema.org/url":"http://hdl.handle.net/2451/12345","http://schema.org/downloadUrl":"https://archive.nyu.edu/bitstream/2451/12345/2/nyu_2451_12345.zip","http://www.opengis.net/def/serviceType/ogc/wfs":"https://maps-public.geo.nyu.edu/geoserver/sdr/wfs","http://www.opengis.net/def/serviceType/ogc/wms":"https://maps-public.geo.nyu.edu/geoserver/sdr/wms"}",
+layer_id_s: "sdr:nyu_2451_12345",
+layer_slug_s: "nyu_2451_12345",
+layer_geom_type_s: "Polygon",
+layer_modified_dt: "2017-5-2T19:45:8Z",
+dc_format_s: "Shapefile",
+dc_language_s: "English",
+dc_type_s: "Dataset",
+dc_publisher_s: [
+"<span style="color: #ff0000;">United States. Department of Agriculture</span>"
+],
+dc_creator_sm: [ ],
+dc_subject_sm: [
+"<span style="color: #ff0000;">Forest management",
+"Hydrography",
+"Fire prevention",
+"Emergency management</span>"
+],
+dct_isPartOf_sm: "Data.gov Rescue",
+dct_issued_s: "04-01-2017",
+dct_temporal_sm: [
+"2017"
+],
+dct_spatial_sm: [
+"United States of America"
+],
+dc_relation_sm: [
+"http://sws.geonames.org/6252001/about/rdf"
+],
+solr_geom: "ENVELOPE(-170.1769013405, -64.5665435791, 71.6032483233, 24.7073204053)",
+solr_year_i: 2017,
+geoblacklight_version: "1.0"
+}</pre>
+<p>Some of the revisions to the metadata are small and reflect choices that we make at NYU (these are highlighted in red). For instance, the titles were changed to reflect a date-title-area convention that we already use. Other fields (like Publisher) are authority controlled and were easy to change, while others, like format and provenance, were easy to add. For those unfamiliar with the GeoBlacklight standard, <a href="https://github.com/geoblacklight/geoblacklight-schema">refer to the project schema pages and related documentation</a>. Many of the metadata enhancements are system requirements for items to be discovered within our <a href="https://geo.nyu.edu/">Spatial Data Repository</a>. Subjects presented more of a problem, as these are drawn from an informal tagging system on Data.gov. We used an elaborate process of finding and replacing to remediate these subjects into the LCSH Authority, which connects the items we collect into our larger library discovery environment.</p>
+<p>The most significant changes are in the descriptions. We preserved the essence of the original Data.gov description, yet we cleaned up the prose a little bit and added a way to trace the item that we are preserving back to its original representation in Data.gov. In the case of aforementioned instances, in which a single Data.gov record contains more than one shapefile, we generated an entirely new record and referenced it to the original Data.gov UUID. For example:</p>
+<pre><strong>Sample Record</strong>
+{
+dc_identifier_s: "http://hdl.handle.net/2451/12346",
+dc_title_s: <span style="color: #000000;">"2017 Aerial Fire Retardant Hydrographic Avoidance Areas: Aquatic - Region 2",
+dc_description_s: "This polygon layer depicts aerial retardant avoidance areas for hydrographic feature dat</span>a. Aerial retardant avoidance area for hydrographic feature data are based on high resolution National Hydrographic Dataset (NHD) produced by USGS and available from the USFS Enterprise Data Warehouse. Forests and/or regions have had the opportunity to modify the default NHD water representation (300ft buffer from all water features) for their areas of interest to accurately represent aerial fire retardant avoidance areas as described in the 2011 Record of Decision for the Nationwide Aerial Application of Fire Retardant on National Forest System Land EIS. These changes have been integrated into this dataset depicting aerial fire retardant avoidance areas for hydrographic features.The following process was used to develop the hydrographic areas to be avoided by aerial fire retardant. Using the FCODE attribute, streams/rivers/waterbodies are categorized into perennial and intermittent/ephemeral types. Linear features (streams &amp; rivers) FCODES 46003 and 46006 and polygonal features (lakes and other waterbody) FCODES 39001, 39005, 39006, 43612, 43614, 46601 are considered intermittentt/ephemeral features. All other FCODES are considered to be perennial features. Underground and covered water features (e.g., pipelines) are excluded. Initially, all intermittent/ephemeral and perennial features were buffered by 300 feet by the Forest/Region units. Subsequently, Forest/Region units may have extended these buffers locally based on their requirements. The resulting avoidance areas may have overlapping features due to the buffering processes.The National Hydrography Dataset (NHD) is a feature-based database that interconnects and uniquely identifies the stream segments or reaches that make up the nation's surface water drainage system. NHD data was originally developed at 1:100,000-scale and exists at that scale for the whole country. This high-resolution NHD, generally developed at 1:24,000/1:12,000 scale, adds detail to the original 1:100,000-scale NHD. (Data for Alaska, Puerto Rico and the Virgin Islands was developed at high-resolution, not 1:100,000 scale.) Local resolution NHD is being developed where partners and data exist. The NHD contains reach codes for networked features, flow direction, names, and centerline representations for areal water bodies. Reaches are also defined on waterbodies and the approximate shorelines of the Great Lakes, the Atlantic and Pacific Oceans and the Gulf of Mexico. The NHD also incorporates the National Spatial Data Infrastructure framework criteria established by the Federal Geographic Data Committee.<span style="color: #ff0000;">This layer does not have a discrete representation in Data.gov; rather, it is a data object represented on the record 77781e81-17d6-4f91-a2df-7dfc7cb33eef. Some modifications to the metadata have been made. Refer to the checksum manifest for a list of all original data objects associated with this item. Refer to the documentation for original metadata and information on the data</span>.",
+dc_rights_s: "Public",
+dct_provenance_s: "NYU",
+dct_references_s: "{"http://schema.org/url":"http://hdl.handle.net/2451/12345","http://schema.org/downloadUrl":"https://archive.nyu.edu/bitstream/2451/12345/2/nyu_2451_12345.zip","http://www.opengis.net/def/serviceType/ogc/wfs":"https://maps-public.geo.nyu.edu/geoserver/sdr/wfs","http://www.opengis.net/def/serviceType/ogc/wms":"https://maps-public.geo.nyu.edu/geoserver/sdr/wms"}",
+layer_id_s: "sdr:nyu_2451_12345",
+layer_slug_s: "nyu_2451_12345",
+layer_geom_type_s: "Polygon",
+layer_modified_dt: "2017-5-2T19:45:8Z",
+dc_format_s: "Shapefile",
+dc_language_s: "English",
+dc_type_s: "Dataset",
+<span style="color: #000000;">dc_publisher_s: [
+"United States. Department of Agriculture"
+],
+dc_creator_sm: [ ],
+dc_subject_sm: [
+"Forest management",
+"Hydrography",
+"Fire prevention",
+"Emergency management"
+],
+dct_isPartOf_sm: "Data.gov Rescue",
+dct_issued_s: "04-01-2017",
+dct_temporal_sm: [
+"2017"
+],
+dct_spatial_sm: [
+"United States of America"
+],
+dc_relation_sm: [
+"http://sws.geonames.org/6252001/about/rdf"
+],
+solr_geom: "ENVELOPE(-170.1769013405, -64.5</span>665435791, 71.6032483233, 24.7073204053)",
+solr_year_i: 2017,
+geoblacklight_version: "1.0"
+}</pre>
+<p>Adding these descriptions into the metadata field not only identifies our work with the data refuge movement, but also it allows for anyone who discovers this data to track back to its presentation in an original context. Still it&#8217;s important to emphasize that this process inevitably means that not all data associated with the Forest Service has been rescued by NYU.</p>
+<p>In all, by narrowing down to one agency and then doing a search that is likely to yield spatial data only, we ended up identifying 71 records of interest but ultimately publishing 90 individual records to represent this data (<a href="https://docs.google.com/spreadsheets/d/11s110BBqw7tr-A1stPsjmmRqx85eTxsCn8PiFiGLGCA/pubhtml?gid=1639213871&amp;single=true">see our final spreadsheet</a>). Note that we are still in the process of importing these records into our discovery environment.</p>
+<p><b>Future Directions: Publishing Checksums</b></p>
+<p>Libraries&#8217; ability to represent precisely and accurately which datasets, or components of datasets, have been preserved is a serious impediment to embarking on a distributed repository / data-rescue project. Further, libraries need to know if data objects have been preserved and where they reside. To return to the earlier example, how is New York University to know that a particular government dataset has already been &#8220;rescued&#8221; and is being preserved (either via a publicly-accessible repository interface, or not)?</p>
+<p>Moreover, even if there is a venue for institutions to discuss which government datasets fall within their collection priorities (e.g. &#8220;New York University cares about federal forestry data, and therefore will be responsible for the stewardship of that data&#8221;), it&#8217;s not clear that there is a good strategy for representing the myriad ways in which the data might exist in its &#8220;rescued&#8221; form. Perhaps the institution that elects to preserve a dataset wants to make a few curatorial decisions in order to better contextualize the data with the rest of the institution&#8217;s offerings (as we did with the Forest Service data). These types of decisions are not abnormal in the context of library accessioning.</p>
+<p>The problem comes when data processing practices of an institution, which are often idiosyncratic and filled with &#8220;local&#8221; decisions to a certain degree, start to inhibit the ability for individuals to identify a copy of a dataset in the capacity of a copy. There is a potential tension between preservation –– preserving the original file structure, naming conventions, and even level of dissemination of government data products –– and discovery, where libraries often make decisions about the most useful way for users to find relevant data that are in conflict with the decisions exhibited in the source files.</p>
+<p>For the purposes of mitigating the problem sketched above, we propose a data store that can be drawn upon by all members of the library / data-rescue community, whereby the arbitrary or locally-specific mappings and organizational decisions can be related back to original checksums of individual, atomic, files. File checksums would be unique identifiers in such a datastore, and given a checksum, this service would display &#8220;claims&#8221; about institutions that hold the corresponding file, and the context in which that file is accessible.</p>
+<p>Consider this as an example:</p>
+<ul>
+<li>New York University, as part of an intentional data rescue effort, decides to focus on collecting and preserving data from the U.S. Forest Service.</li>
+<li>The documents and data from Forest Service are accessible through many venues:
+<ul>
+<li>They (or some subset) are linked to from a Data.gov record</li>
+<li>They (or some subset) are linked to directly from the <a href="https://data.fs.usda.gov/geodata/">FSGeodata Clearinghouse</a></li>
+<li>They are available directly from a geoservices or FTP endpoint maintained by the Forest Service (such as <a href="https://apps.fs.usda.gov/arcx/rest/services/EDW">here</a>).</li>
+</ul>
+</li>
+<li>NYU wants a way to grab all of the documents from the Forest Service that it is aware of and make those documents available in an online repository. The question is, if NYU has made organizational and curatorial decisions about the presentation of documents rescued, how can it be represented (to others) that the files in the repository are indeed preserved copies of other datasets? If, for instance, Purdue University comes along and wants to verify that everything on the Forest Service&#8217;s site is preserved somewhere, it now becomes more difficult to do so, particularly since those documents never possessed a canonical or authoritative ID in the first place, and even could have been downloaded originally from various source URLs.</li>
+</ul>
+<p>Imagine instead that as NYU accessions documents ––restructuring them and adding metadata –– they not only create checksum manifests (similar to, if not even identical to the ones created by default by <a href="https://en.wikipedia.org/wiki/BagIt">BagIt</a>), but also deposit those manifests to a centralized data store in such a form that the data store could now relate essential information:</p>
+<p style="padding-left: 30px;">The file with checksum <code>8a53c3c191cd27e3472b3e717e3c2d7d979084b74ace0d1e86042b11b56f2797</code> appears in as a component of the document <code>instituton_a_9876...</code> held by <code>New York University.</code></p>
+<p>Assuming all checksums are computed at the lowest possible level on files rescued from Federal agencies (i.e., always unzip archives, or otherwise get to an atomic file before computing a checksum), such a service could use archival manifest data as a way to signal to other institutions if a file has been preserved, regardless of whether or not it exists as a smaller component of a different intellectual entity –– and it could even communicate additional data about where to find these preserved copies. In the example of the dataset mentioned above, the original Data.gov record represents 8 distinct resources, including a Shapefile, a geodatabase, an XML metadata document, an HTML file that links to an API, and more. For the sake of preservation, we could package all of these items, generate checksums for each, and then take a further step in contributing our manifest to this hypothetical datastore. Then, as other institutions look to save other data objects, they could search against this datastore and find not merely checksums of items at the <em>package</em> level, but actually at the package component level, allowing them to evaluate which portion or percentage of data has been preserved.</p>
+<p>A system such as the one sketched above could efficiently communicate preservation priorities to a community of practice, and even find use for more general collection-development priorities of a library. Other work in this field, particularly that regarding IPFS, could tie in nicely –– but unlike IPFS, this would provide a way to identify content that exists within file archives, and would not necessitate any new infrastructure for hosting material. All it would require is for an institution to contribute checksum manifests and a small amount of accompanying metadata to a central datastore.</p>
+<p><b>Principles</b></p>
+<p><span style="font-weight: 400;">Even though our rescue of the Forest Service data is still in process, we have learned a lot about the challenges associated with this project. We’re very interested in learning about how other institutions are handling the process of rescuing federal data and look forward to more discussions at the event in Washington D.C. on May 8.</span></p>
+        
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+        
+		<span class="byline"><span class="author vcard"><img alt='' src='https://secure.gravatar.com/avatar/019ef9d84cf04038c6f3fc2302d3fcf3?s=49&amp;d=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Fwp-content%2Fuploads%2F2016%2F02%2FTEAMRDM.png&amp;r=g' srcset='https://secure.gravatar.com/avatar/019ef9d84cf04038c6f3fc2302d3fcf3?s=98&#038;d=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Fwp-content%2Fuploads%2F2016%2F02%2FTEAMRDM.png&#038;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' loading='lazy'/><span class="screen-reader-text">Author </span> <a class="url fn n" href="../author/ab6137/index.html">Andrew Battista</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="index.html" rel="bookmark"><time class="entry-date published" datetime="2017-05-04T11:03:36-04:00">May 4, 2017</time><time class="updated" datetime="2018-02-22T15:19:13-05:00">February 22, 2018</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="../category/news/index.html" rel="category tag">News</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="../tag/data-refuge/index.html" rel="tag">data refuge</a>, <a href="../tag/data-rescue/index.html" rel="tag">data rescue</a>, <a href="../tag/discovery/index.html" rel="tag">discovery</a>, <a href="../tag/hud/index.html" rel="tag">HUD</a>, <a href="../tag/preservation/index.html" rel="tag">preservation</a>, <a href="../tag/sha256/index.html" rel="tag">SHA256</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## --><hr class="single-post-hr"><p style="font-size: 90%">Site content licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a></p>
+	</main><!-- .site-main -->
+
+
+</div><!-- .content-area -->
+
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .header-bg -->
+</div><!-- .site -->
+
+<script type="text/javascript">if(window.aiModifyParent) {aiModifyParent();}</script>				<script type="text/javascript">
+					jQuery(document).ready(function($){
+					});
+				</script>
+<img alt='css.php' src="../wp-content/plugins/cookies-for-comments/cssac58.gif?k=cc3665ba04481ea629f4a0b1601f6024&amp;o=i&amp;t=2057419403" width='1' height='1' /><script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script src='../wp-content/plugins/jquery-collapse-o-matic/js/collapse4a8b.js?ver=1.6.23' id='collapseomatic-js-js'></script>
+<script id='theme-my-login-js-extra'>
+var themeMyLogin = {"action":"","errors":[]};
+</script>
+<script src='../wp-content/plugins/theme-my-login/assets/scripts/theme-my-login.min03db.js?ver=7.1.1' id='theme-my-login-js'></script>
+<script src='../wp-content/plugins/wp-accessibility/js/longdesc.button5152.js?ver=1.0' id='longdesc.button-js'></script>
+<script src='../wp-content/plugins/wp-accessibility/js/current-menu-item5152.js?ver=1.0' id='current.menu-js'></script>
+<script src='https://cdn.plot.ly/plotly-1.6.0.min.js?ver=1.0' id='plotly-js'></script>
+<script src='https://unpkg.com/leaflet@1.0.3/dist/leaflet.js?ver=1.0' id='leaflet-js'></script>
+<script src='../wp-content/themes/data-services-theme/js/plotheader5152.js?ver=1.0' id='plotheader-js'></script>
+<script src='../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../wp-content/plugins/page-links-to/dist/new-tab7984.js?ver=3.3.4' id='page-links-to-js'></script>
+<script id='ai-js-js-extra'>
+var MyAjax = {"ajaxurl":"https:\/\/data-services.hosting.nyu.edu\/wp-admin\/admin-ajax.php","security":"dc0ed48d5d"};
+</script>
+<script src='../wp-content/plugins/advanced-iframe/js/ai68b3.js?ver=1' id='ai-js-js'></script>
+<script src='../wp-includes/js/wp-embed.min422b.js?ver=5.5.12' id='wp-embed-js'></script>
+
+<script type='text/javascript'>
+//<![CDATA[
+(function( $ ) { 'use strict';
+	
+	$('a').removeAttr('target');
+	
+	$('input,a,select,textarea,button').removeAttr('tabindex');
+	
+}(jQuery));
+//]]>
+</script></body>
+
+<!-- Mirrored from data-services.hosting.nyu.edu/the-challenge-of-rescuing-federal-data-thoughts-and-lessons/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Jul 2023 17:38:19 GMT -->
+</html>

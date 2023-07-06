@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- Mirrored from data-services.hosting.nyu.edu/tips-and-tricks-for-using-matlab-at-nyu/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Jul 2023 17:43:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Tips and Tricks for using MATLAB at NYU &#8211; Data Dispatch</title>
+<link rel='dns-prefetch' href='http://cdn.plot.ly/' />
+<link rel='dns-prefetch' href='http://unpkg.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Data Dispatch &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Data Dispatch &raquo; Comments Feed" href="../comments/feed/index.html" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/data-services.hosting.nyu.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.12"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../wp-includes/css/dist/block-library/style.min422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='../wp-includes/css/dist/block-library/theme.min422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='../wp-content/plugins/jquery-collapse-o-matic/light_stylef24c.css?ver=1.6' media='all' />
+<link rel='stylesheet' id='PVGM-swipe-css-css'  href='../wp-content/plugins/photo-video-gallery-master/lightbox/swipebox/swipebox422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='PVGM-boot-strap-css-css'  href='../wp-content/plugins/photo-video-gallery-master/css/bootstrap422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='pvgm-effects-css-css'  href='../wp-content/plugins/photo-video-gallery-master/css/pvgm-effects422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='tp_twitter_plugin_css-css'  href='../wp-content/plugins/recent-tweets-widget/tp_twitter_plugin5152.css?ver=1.0' media='screen' />
+<link rel='stylesheet' id='theme-my-login-css'  href='../wp-content/plugins/theme-my-login/assets/styles/theme-my-login.min03db.css?ver=7.1.1' media='all' />
+<link rel='stylesheet' id='wpa-style-css'  href='../wp-content/plugins/wp-accessibility/css/wpa-style422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='ez-icomoon-css'  href='../wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min3c89.css?ver=2.0.11' media='all' />
+<link rel='stylesheet' id='ez-toc-css'  href='../wp-content/plugins/easy-table-of-contents/assets/css/screen.min3c89.css?ver=2.0.11' media='all' />
+<style id='ez-toc-inline-css'>
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}
+</style>
+<link rel='stylesheet' id='parent-style-css'  href='../wp-content/themes/twentysixteen/style422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='../wp-content/themes/data-services-theme/style422b.css?ver=5.5.12' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&amp;subset=latin%2Clatin-ext&amp;display=fallback' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../wp-content/themes/twentysixteen/genericons/genericons5589.css?ver=3.4.1' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='../wp-content/themes/data-services-theme/style8d89.css?ver=20190507' media='all' />
+<style id='twentysixteen-style-inline-css'>
+	/* Color Scheme */
+
+	/* Background Color */
+	body {
+		background-color: #ffffff;
+	}
+
+	/* Page Background Color */
+	.site {
+		background-color: #ff675f;
+	}
+
+	mark,
+	ins,
+	button,
+	button[disabled]:hover,
+	button[disabled]:focus,
+	input[type="button"],
+	input[type="button"][disabled]:hover,
+	input[type="button"][disabled]:focus,
+	input[type="reset"],
+	input[type="reset"][disabled]:hover,
+	input[type="reset"][disabled]:focus,
+	input[type="submit"],
+	input[type="submit"][disabled]:hover,
+	input[type="submit"][disabled]:focus,
+	.menu-toggle.toggled-on,
+	.menu-toggle.toggled-on:hover,
+	.menu-toggle.toggled-on:focus,
+	.pagination .prev,
+	.pagination .next,
+	.pagination .prev:hover,
+	.pagination .prev:focus,
+	.pagination .next:hover,
+	.pagination .next:focus,
+	.pagination .nav-links:before,
+	.pagination .nav-links:after,
+	.widget_calendar tbody a,
+	.widget_calendar tbody a:hover,
+	.widget_calendar tbody a:focus,
+	.page-links a,
+	.page-links a:hover,
+	.page-links a:focus {
+		color: #ff675f;
+	}
+
+	/* Link Color */
+	.menu-toggle:hover,
+	.menu-toggle:focus,
+	a,
+	.main-navigation a:hover,
+	.main-navigation a:focus,
+	.dropdown-toggle:hover,
+	.dropdown-toggle:focus,
+	.social-navigation a:hover:before,
+	.social-navigation a:focus:before,
+	.post-navigation a:hover .post-title,
+	.post-navigation a:focus .post-title,
+	.tagcloud a:hover,
+	.tagcloud a:focus,
+	.site-branding .site-title a:hover,
+	.site-branding .site-title a:focus,
+	.entry-title a:hover,
+	.entry-title a:focus,
+	.entry-footer a:hover,
+	.entry-footer a:focus,
+	.comment-metadata a:hover,
+	.comment-metadata a:focus,
+	.pingback .comment-edit-link:hover,
+	.pingback .comment-edit-link:focus,
+	.comment-reply-link,
+	.comment-reply-link:hover,
+	.comment-reply-link:focus,
+	.required,
+	.site-info a:hover,
+	.site-info a:focus {
+		color: #640c1f;
+	}
+
+	mark,
+	ins,
+	button:hover,
+	button:focus,
+	input[type="button"]:hover,
+	input[type="button"]:focus,
+	input[type="reset"]:hover,
+	input[type="reset"]:focus,
+	input[type="submit"]:hover,
+	input[type="submit"]:focus,
+	.pagination .prev:hover,
+	.pagination .prev:focus,
+	.pagination .next:hover,
+	.pagination .next:focus,
+	.widget_calendar tbody a,
+	.page-links a:hover,
+	.page-links a:focus {
+		background-color: #640c1f;
+	}
+
+	input[type="date"]:focus,
+	input[type="time"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="week"]:focus,
+	input[type="month"]:focus,
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="number"]:focus,
+	textarea:focus,
+	.tagcloud a:hover,
+	.tagcloud a:focus,
+	.menu-toggle:hover,
+	.menu-toggle:focus {
+		border-color: #640c1f;
+	}
+
+	/* Main Text Color */
+	body,
+	blockquote cite,
+	blockquote small,
+	.main-navigation a,
+	.menu-toggle,
+	.dropdown-toggle,
+	.social-navigation a,
+	.post-navigation a,
+	.pagination a:hover,
+	.pagination a:focus,
+	.widget-title a,
+	.site-branding .site-title a,
+	.entry-title a,
+	.page-links > .page-links-title,
+	.comment-author,
+	.comment-reply-title small a:hover,
+	.comment-reply-title small a:focus {
+		color: #402b30;
+	}
+
+	blockquote,
+	.menu-toggle.toggled-on,
+	.menu-toggle.toggled-on:hover,
+	.menu-toggle.toggled-on:focus,
+	.post-navigation,
+	.post-navigation div + div,
+	.pagination,
+	.widget,
+	.page-header,
+	.page-links a,
+	.comments-title,
+	.comment-reply-title {
+		border-color: #402b30;
+	}
+
+	button,
+	button[disabled]:hover,
+	button[disabled]:focus,
+	input[type="button"],
+	input[type="button"][disabled]:hover,
+	input[type="button"][disabled]:focus,
+	input[type="reset"],
+	input[type="reset"][disabled]:hover,
+	input[type="reset"][disabled]:focus,
+	input[type="submit"],
+	input[type="submit"][disabled]:hover,
+	input[type="submit"][disabled]:focus,
+	.menu-toggle.toggled-on,
+	.menu-toggle.toggled-on:hover,
+	.menu-toggle.toggled-on:focus,
+	.pagination:before,
+	.pagination:after,
+	.pagination .prev,
+	.pagination .next,
+	.page-links a {
+		background-color: #402b30;
+	}
+
+	/* Secondary Text Color */
+
+	/**
+	 * IE8 and earlier will drop any block with CSS3 selectors.
+	 * Do not combine these styles with the next block.
+	 */
+	body:not(.search-results) .entry-summary {
+		color: #402b30;
+	}
+
+	blockquote,
+	.post-password-form label,
+	a:hover,
+	a:focus,
+	a:active,
+	.post-navigation .meta-nav,
+	.image-navigation,
+	.comment-navigation,
+	.widget_recent_entries .post-date,
+	.widget_rss .rss-date,
+	.widget_rss cite,
+	.site-description,
+	.author-bio,
+	.entry-footer,
+	.entry-footer a,
+	.sticky-post,
+	.taxonomy-description,
+	.entry-caption,
+	.comment-metadata,
+	.pingback .edit-link,
+	.comment-metadata a,
+	.pingback .comment-edit-link,
+	.comment-form label,
+	.comment-notes,
+	.comment-awaiting-moderation,
+	.logged-in-as,
+	.form-allowed-tags,
+	.site-info,
+	.site-info a,
+	.wp-caption .wp-caption-text,
+	.gallery-caption,
+	.widecolumn label,
+	.widecolumn .mu_register label {
+		color: #402b30;
+	}
+
+	.widget_calendar tbody a:hover,
+	.widget_calendar tbody a:focus {
+		background-color: #402b30;
+	}
+
+	/* Border Color */
+	fieldset,
+	pre,
+	abbr,
+	acronym,
+	table,
+	th,
+	td,
+	input[type="date"],
+	input[type="time"],
+	input[type="datetime-local"],
+	input[type="week"],
+	input[type="month"],
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
+	textarea,
+	.main-navigation li,
+	.main-navigation .primary-menu,
+	.menu-toggle,
+	.dropdown-toggle:after,
+	.social-navigation a,
+	.image-navigation,
+	.comment-navigation,
+	.tagcloud a,
+	.entry-content,
+	.entry-summary,
+	.page-links a,
+	.page-links > span,
+	.comment-list article,
+	.comment-list .pingback,
+	.comment-list .trackback,
+	.comment-reply-link,
+	.no-comments,
+	.widecolumn .mu_register .mu_alert {
+		border-color: #402b30; /* Fallback for IE7 and IE8 */
+		border-color: rgba( 64, 43, 48, 0.2);
+	}
+
+	hr,
+	code {
+		background-color: #402b30; /* Fallback for IE7 and IE8 */
+		background-color: rgba( 64, 43, 48, 0.2);
+	}
+
+	@media screen and (min-width: 56.875em) {
+		.main-navigation li:hover > a,
+		.main-navigation li.focus > a {
+			color: #640c1f;
+		}
+
+		.main-navigation ul ul,
+		.main-navigation ul ul li {
+			border-color: rgba( 64, 43, 48, 0.2);
+		}
+
+		.main-navigation ul ul:before {
+			border-top-color: rgba( 64, 43, 48, 0.2);
+			border-bottom-color: rgba( 64, 43, 48, 0.2);
+		}
+
+		.main-navigation ul ul li {
+			background-color: #ff675f;
+		}
+
+		.main-navigation ul ul:after {
+			border-top-color: #ff675f;
+			border-bottom-color: #ff675f;
+		}
+	}
+
+
+		/* Custom Page Background Color */
+		.site {
+			background-color: #ffffff;
+		}
+
+		mark,
+		ins,
+		button,
+		button[disabled]:hover,
+		button[disabled]:focus,
+		input[type="button"],
+		input[type="button"][disabled]:hover,
+		input[type="button"][disabled]:focus,
+		input[type="reset"],
+		input[type="reset"][disabled]:hover,
+		input[type="reset"][disabled]:focus,
+		input[type="submit"],
+		input[type="submit"][disabled]:hover,
+		input[type="submit"][disabled]:focus,
+		.menu-toggle.toggled-on,
+		.menu-toggle.toggled-on:hover,
+		.menu-toggle.toggled-on:focus,
+		.pagination .prev,
+		.pagination .next,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.pagination .nav-links:before,
+		.pagination .nav-links:after,
+		.widget_calendar tbody a,
+		.widget_calendar tbody a:hover,
+		.widget_calendar tbody a:focus,
+		.page-links a,
+		.page-links a:hover,
+		.page-links a:focus {
+			color: #ffffff;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation ul ul li {
+				background-color: #ffffff;
+			}
+
+			.main-navigation ul ul:after {
+				border-top-color: #ffffff;
+				border-bottom-color: #ffffff;
+			}
+		}
+	
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #cc0000;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #cc0000;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #cc0000;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #cc0000;
+			}
+		}
+	
+</style>
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='../wp-content/themes/twentysixteen/css/blockscb8b.css?ver=20190102' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<script src='../wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script src='../wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4' id='jquery-ui-core-js'></script>
+<script src='../wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4' id='jquery-ui-widget-js'></script>
+<script src='../wp-includes/js/jquery/ui/mouse.mine899.js?ver=1.11.4' id='jquery-ui-mouse-js'></script>
+<script src='../wp-includes/js/jquery/ui/draggable.mine899.js?ver=1.11.4' id='jquery-ui-draggable-js'></script>
+<script src='../wp-content/plugins/before-after/js/jquery.beforeafter-1.3.instruite.min422b.js?ver=5.5.12' id='jquery-before-after-js'></script>
+<script src='../wp-content/plugins/photo-video-gallery-master/lightbox/swipebox/jquery.swipebox.min422b.js?ver=5.5.12' id='PVGM-swipe-js-js'></script>
+<!--[if lt IE 9]>
+<script src='https://data-services.hosting.nyu.edu/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/posts/85.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Register now for February Data Services tutorials!' href='../register-now-for-february-data-services-tutorials/index.html' />
+<link rel='next' title='Register now for March Data Services tutorials!' href='../register-now-for-march-data-services-tutorials/index.html' />
+<meta name="generator" content="WordPress 5.5.12" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../index648c.html?p=85' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed78ec.json?url=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Ftips-and-tricks-for-using-matlab-at-nyu%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embedf6b6?url=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Ftips-and-tricks-for-using-matlab-at-nyu%2F&amp;format=xml" />
+			<style type="text/css">
+				.ba-container {
+					margin-left:auto;
+					margin-right:auto;
+				}
+				.ba-container + div.balinks {
+					margin: 0 auto;
+				}
+				.ba-container div img {
+					max-width: none;
+				}
+			</style>
+<link rel="icon" href="../wp-content/uploads/2017/07/DS-icon.png" sizes="32x32" />
+<link rel="icon" href="../wp-content/uploads/2017/07/DS-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../wp-content/uploads/2017/07/DS-icon.png" />
+<meta name="msapplication-TileImage" content="https://data-services.hosting.nyu.edu/wp-content/uploads/2017/07/DS-icon.png" />
+        <style> 
+           @media screen and (min-width: 320px) and (max-width:720px) {
+                .column {width:100%;}}
+           @media screen and (min-width: 320px) and (max-width:720px) {
+                #one {width:100%;} #two {width:100%;} #three {width:100%;} #four {width:100%;}}
+           @media screen and (min-width: 320px) and (max-width:720px) {
+                .midcolumn {width:100%;}}
+           .site-header {padding:  3.125em 2.6923% 1em 2.6923%;}
+           .entry-content {margin: 1%;}
+           @media screen and (min-width: 320px) and (max-width:720px) {.entry-content {margin:0; width:100%;}}
+           .site-title-banner a:link, a:visited, a:hover {color: #cc0000;}
+        </style>
+	<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75143906-1', 'auto');
+  ga('send', 'pageview');
+</script>   
+
+</head>
+
+<body class="post-template-default single single-post postid-85 single-format-standard wp-embed-responsive group-blog">
+
+<div id="page" class="site">
+<aside id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
+			<div class="widget-area">
+			<section id="search-2" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://data-services.hosting.nyu.edu/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</section>		</div><!-- .widget-area -->
+	
+			<div class="widget-area">
+			<section id="text-2" class="widget widget_text">			<div class="textwidget"><nav class="social-navigation"><ul class="social-links-menu"><li><a href="https://twitter.com/nyudataservices"></a></li><li><a href="../login.html"></a></li></ul></nav></div>
+		</section>		</div><!-- .widget-area -->
+	</aside><!-- .content-bottom-widgets -->
+<div class="header-bg">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header id="masthead" class="site-header" role="banner">
+                      
+
+
+
+			<a href="../index.html" alt="Return to home page" rel="home"><div class="site-header-main">
+                                <div id="bannerplot" class="site-banner-plot" style="height: 200px; width: 300px;"></div><!-- FP Plot -->
+				<div class="site-branding">
+                                
+			    
+						<h1 class="site-title-banner-main">Data Dispatch</h1>
+				
+                    						<p class="site-description">NYU Data Services News and Updates</p>
+											
+				</div><!-- .site-branding -->
+				
+			</div></a><!-- .site-header-main -->
+
+		</header><!-- .site-header -->
+
+		<div id="content" class="site-content" style="padding: 0px;"> <!--makes content area full-width-->
+		
+		
+<div id="primary" class="content-area" style="margin: 50px 0 0 50px; width: 70%;">
+	<main id="main" class="site-main" role="main">
+		
+<article id="post-85" class="post-85 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title">Tips and Tricks for using MATLAB at NYU</h1>	</header><!-- .entry-header -->
+	
+	
+
+	<div class="entry-content">
+		<div>Please join MathWorks for two different MATLAB seminars on <b>Thursday, March 7, 2013 at NYU’s Kimmel Center, Room 802 (Shorin Studio)</b>.</div>
+<div></div>
+<div>**These technical seminars are FREE for all NYU faculty, staff, researcher and students.**</div>
+<div></div>
+<div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+<div>Tips and Tricks for using MATLAB at New York University</div>
+<div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+<div></div>
+<div>Presenter: Gerardo Hernandez, MathWorks Technical Application Engineer</div>
+<div></div>
+<div>10am-12pm</div>
+<div>Session 1: Mathematical Modeling with MATLAB</div>
+<div>Mathematical models are critical to understanding and accurately simulating the behavior of complex systems. They enable important tasks such as forecasting system behavior for various “what if” scenarios, characterizing system response, and designing control systems.  This session will show how you can use MATLAB products for mathematical modeling tasks, including:</div>
+<div></div>
+<div>•       Developing models using data fitting and first-principle modeling techniques</div>
+<div>•       Optimizing the accuracy of mathematical models</div>
+<div>•       Simulating models and post-processing the results</div>
+<div>•       Documenting and sharing models</div>
+<div></div>
+<div>You will also learn about different approaches you can use to develop models, including developing models programmatically using the MATLAB language, deriving closed-form analytical equations using symbolic computation, and leveraging prebuilt graphical tools for specific modeling tasks such as curve and surface fitting.</div>
+<div></div>
+<div>2pm-4pm</div>
+<div>Session 2:  Parallel Computing with MATLAB</div>
+<div>In this session, you will learn how to solve computationally and data-intensive problems using multicore processors, GPUs, and computer clusters. We will introduce you to high-level programming constructs that allow you to parallelize MATLAB applications without CUDA or MPI programming and run them on multiple processors. We will also show you how to overcome the memory limits of your desktop computer and solve problems that require manipulating very large matrices by distributing your data.</div>
+<div></div>
+<div>Highlights include:</div>
+<div>•       Toolboxes with built-in support for parallel computing</div>
+<div>•       Creating parallel applications to speed up independent tasks</div>
+<div>•       Programming with distributed arrays to work with large data sets</div>
+<div>•       Scaling up to computer clusters, grid environments, or clouds</div>
+<div>•       Tips on developing parallel algorithms</div>
+        
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+        
+		<span class="byline"><span class="author vcard"><img alt='' src='https://secure.gravatar.com/avatar/0f1c4217760d618116bb8a191207b6a8?s=49&amp;d=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Fwp-content%2Fuploads%2F2016%2F02%2FTEAMRDM.png&amp;r=g' srcset='https://secure.gravatar.com/avatar/0f1c4217760d618116bb8a191207b6a8?s=98&#038;d=https%3A%2F%2Fdata-services.hosting.nyu.edu%2Fwp-content%2Fuploads%2F2016%2F02%2FTEAMRDM.png&#038;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' loading='lazy'/><span class="screen-reader-text">Author </span> <a class="url fn n" href="../author/admin/index.html">Data Services</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="index.html" rel="bookmark"><time class="entry-date published" datetime="2013-02-22T15:12:51-05:00">February 22, 2013</time><time class="updated" datetime="2016-01-29T11:28:45-05:00">January 29, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="../category/uncategorized/index.html" rel="category tag">Uncategorized</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## --><hr class="single-post-hr"><p style="font-size: 90%">Site content licensed <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"/></a></p>
+	</main><!-- .site-main -->
+
+
+</div><!-- .content-area -->
+
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .header-bg -->
+</div><!-- .site -->
+
+				<script type="text/javascript">
+					jQuery(document).ready(function($){
+					});
+				</script>
+<img alt='css.php' src="../wp-content/plugins/cookies-for-comments/css198a.gif?k=cc3665ba04481ea629f4a0b1601f6024&amp;o=i&amp;t=160291944" width='1' height='1' /><script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script src='../wp-content/plugins/jquery-collapse-o-matic/js/collapse4a8b.js?ver=1.6.23' id='collapseomatic-js-js'></script>
+<script id='theme-my-login-js-extra'>
+var themeMyLogin = {"action":"","errors":[]};
+</script>
+<script src='../wp-content/plugins/theme-my-login/assets/scripts/theme-my-login.min03db.js?ver=7.1.1' id='theme-my-login-js'></script>
+<script src='../wp-content/plugins/wp-accessibility/js/longdesc.button5152.js?ver=1.0' id='longdesc.button-js'></script>
+<script src='../wp-content/plugins/wp-accessibility/js/current-menu-item5152.js?ver=1.0' id='current.menu-js'></script>
+<script src='https://cdn.plot.ly/plotly-1.6.0.min.js?ver=1.0' id='plotly-js'></script>
+<script src='https://unpkg.com/leaflet@1.0.3/dist/leaflet.js?ver=1.0' id='leaflet-js'></script>
+<script src='../wp-content/themes/data-services-theme/js/plotheader5152.js?ver=1.0' id='plotheader-js'></script>
+<script src='../wp-content/themes/twentysixteen/js/skip-link-focus-fixfd15.js?ver=20170530' id='twentysixteen-skip-link-focus-fix-js'></script>
+<script id='twentysixteen-script-js-extra'>
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src='../wp-content/themes/twentysixteen/js/functionsb889.js?ver=20181217' id='twentysixteen-script-js'></script>
+<script src='../wp-content/plugins/page-links-to/dist/new-tab7984.js?ver=3.3.4' id='page-links-to-js'></script>
+<script src='../wp-includes/js/wp-embed.min422b.js?ver=5.5.12' id='wp-embed-js'></script>
+
+<script type='text/javascript'>
+//<![CDATA[
+(function( $ ) { 'use strict';
+	
+	$('a').removeAttr('target');
+	
+	$('input,a,select,textarea,button').removeAttr('tabindex');
+	
+}(jQuery));
+//]]>
+</script></body>
+
+<!-- Mirrored from data-services.hosting.nyu.edu/tips-and-tricks-for-using-matlab-at-nyu/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Jul 2023 17:43:40 GMT -->
+</html>

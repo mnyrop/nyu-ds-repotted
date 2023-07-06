@@ -1,0 +1,122 @@
+/*
+Theme Name:     Bassist-Modified
+Description:    A modified version of Bassist theme for Research Day
+Author:         Nicholas Wolf
+Template:       bassist
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+
+@font-face {
+    font-family: 'OratorStd';
+    src: local('OratorStd'), 
+         local('OratorStd'), 
+         url('fonts/OratorStd.woff2') format('woff2'), 
+         url('fonts/OratorStd.woff') format('woff'), 
+         url('fonts/OratorStd.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#masthead {
+	background-color: #040707;
+}
+
+.site-identity {
+	height: 299px;
+}
+
+@media (max-width: 889px) {
+			#main {
+				padding-top:110px;
+			}
+		}
+
+
+@media (max-width: 767px) {
+			.site-identity {
+				height:120px;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				height:50px;
+			}
+		}
+
+.site-header {
+			background: url(../../../files/2018/09/DHDATA_web_banner-08.png) no-repeat scroll top;
+			background-size: 1920px auto;
+		}
+
+		@media (max-width: 767px) {
+			.site-header {
+				background-size: 768px auto;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				background-size: 360px auto;
+			}
+		}
+
+.about-section,
+.audio-format-section,
+.video-format-section,
+.image-format-section,
+.contact-section {
+	padding: 301px 0 4em; /*18.75em 0 4em;*/
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'OratorStd', sans-serif;   
+}
+
+main {
+	padding: 301px 0 0;
+}
+
+a {
+    color:#57068c;
+}
+
+.front-page #main-content {
+    padding: 4em;
+}
+
+#site-info .footer-site-title:after {
+	content: "";
+}
+
+button,
+button[disabled]:hover,
+button[disabled]:focus,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus {
+	background: #ef4136;
+	border: 0;
+	border-radius: 2px;
+	color: #fafafa;
+	font-weight: 700;
+	letter-spacing: 0.046875em;
+	line-height: 1;
+	padding: 0.84375em 0.875em 0.78125em;
+	text-transform: uppercase;
+}
